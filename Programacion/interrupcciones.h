@@ -1,8 +1,8 @@
 #ifndef interrupciones_H_
 #define interrupciones_H_
 
-void PWMconfi(void); 
-
+void interrupcionX(void);
+void interrupcionY(void);
 
 
 #endif	/*interrupciones_H_*/  

@@ -1,9 +1,9 @@
 #ifndef MOTOR_H_
 #define MOTOR_H_
 
-void motorX(uint16_t XR, uint16_t XN);
-void motorY(uint16_t YR, uint16_t YN);
-void motorXY(uint16_t XR, uint16_t XN, uint16_t YR, uint16_t YN);
+void motoresmov(int16_t DifX, int16_t DifY);
+void Accion(void);
+int16_t Conversion(int16_t Dif);
 
 
 

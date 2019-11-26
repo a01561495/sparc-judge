@@ -14,7 +14,7 @@
 void UARTconfi (void) { 
     ADCON1 = 0x0F; //COnfigurar los pin a digitales
     
-    TRISCbits.RC6 = 0; //  Pin RC6 como salida digital para TX.
+    TRISCbits.RC6 = 1; //  Pin RC6 como salida digital para TX.
     TRISCbits.RC7 = 1; //  Pin RC7 como entrada digital para RX.
     
     TXSTAbits.TX9 = 0; // Transmision de 8 bits
