@@ -1,0 +1,649 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"6581 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC18F4550.h
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"3858
+[s S154 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S154 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
+"3866
+[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S155 . RC0 RC1 RC2 . RC6 RC7 ]
+"3857
+[u S153 `S154 1 `S155 1 ]
+[n S153 . . . ]
+"3875
+[v _TRISCbits `VS153 ~T0 @X0 0 e@3988 ]
+"5157
+[s S210 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S210 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"5167
+[s S211 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S211 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+"5177
+[s S212 :6 `uc 1 :1 `uc 1 ]
+[n S212 . . TX8_9 ]
+"5181
+[s S213 :1 `uc 1 ]
+[n S213 . TXD8 ]
+"5156
+[u S209 `S210 1 `S211 1 `S212 1 `S213 1 ]
+[n S209 . . . . . ]
+"5185
+[v _TXSTAbits `VS209 ~T0 @X0 0 e@4012 ]
+"6073
+[s S247 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S247 . ABDEN WUE . BRG16 TXCKP RXDTP RCIDL ABDOVF ]
+"6083
+[s S248 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S248 . . SCKP . RCMT ]
+"6089
+[s S249 :5 `uc 1 :1 `uc 1 ]
+[n S249 . . RXCKP ]
+"6093
+[s S250 :1 `uc 1 :1 `uc 1 ]
+[n S250 . . W4E ]
+"6072
+[u S246 `S247 1 `S248 1 `S249 1 `S250 1 ]
+[n S246 . . . . . ]
+"6098
+[v _BAUDCONbits `VS246 ~T0 @X0 0 e@4024 ]
+"4947
+[s S196 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S196 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"4957
+[s S197 :3 `uc 1 :1 `uc 1 ]
+[n S197 . . ADEN ]
+"4961
+[s S198 :5 `uc 1 :1 `uc 1 ]
+[n S198 . . SRENA ]
+"4965
+[s S199 :6 `uc 1 :1 `uc 1 ]
+[n S199 . . RC8_9 ]
+"4969
+[s S200 :6 `uc 1 :1 `uc 1 ]
+[n S200 . . RC9 ]
+"4973
+[s S201 :1 `uc 1 ]
+[n S201 . RCD8 ]
+"4946
+[u S195 `S196 1 `S197 1 `S198 1 `S199 1 `S200 1 `S201 1 ]
+[n S195 . . . . . . . ]
+"4977
+[v _RCSTAbits `VS195 ~T0 @X0 0 e@4011 ]
+"5431
+[v _SPBRG1 `Vuc ~T0 @X0 0 e@4015 ]
+"5402
+[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
+"10 ../Librerias.X\PWM4550.h
+[; ;../Librerias.X\PWM4550.h: 10: void PROBLEMA(void);
+[v _PROBLEMA `(v ~T0 @X0 0 ef ]
+"4474 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC18F4550.h
+[s S178 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S178 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
+"4484
+[s S179 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S179 . . TX1IF RC1IF . PSPIF ]
+"4473
+[u S177 `S178 1 `S179 1 ]
+[n S177 . . . ]
+"4492
+[v _PIR1bits `VS177 ~T0 @X0 0 e@3998 ]
+"5419
+[v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
+"10176
+[v _OERR `Vb ~T0 @X0 0 e@32089 ]
+"5414
+[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
+"9201
+[v _CREN `Vb ~T0 @X0 0 e@32092 ]
+"9693
+[v _FERR `Vb ~T0 @X0 0 e@32090 ]
+"11034
+[v _TXEN `Vb ~T0 @X0 0 e@32101 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC18F4550.h
+[; <" SPPDATA equ 0F62h ;# ">
+"74
+[; <" SPPCFG equ 0F63h ;# ">
+"151
+[; <" SPPEPS equ 0F64h ;# ">
+"225
+[; <" SPPCON equ 0F65h ;# ">
+"251
+[; <" UFRM equ 0F66h ;# ">
+"258
+[; <" UFRML equ 0F66h ;# ">
+"336
+[; <" UFRMH equ 0F67h ;# ">
+"376
+[; <" UIR equ 0F68h ;# ">
+"432
+[; <" UIE equ 0F69h ;# ">
+"488
+[; <" UEIR equ 0F6Ah ;# ">
+"539
+[; <" UEIE equ 0F6Bh ;# ">
+"590
+[; <" USTAT equ 0F6Ch ;# ">
+"650
+[; <" UCON equ 0F6Dh ;# ">
+"701
+[; <" UADDR equ 0F6Eh ;# ">
+"765
+[; <" UCFG equ 0F6Fh ;# ">
+"844
+[; <" UEP0 equ 0F70h ;# ">
+"952
+[; <" UEP1 equ 0F71h ;# ">
+"1060
+[; <" UEP2 equ 0F72h ;# ">
+"1168
+[; <" UEP3 equ 0F73h ;# ">
+"1276
+[; <" UEP4 equ 0F74h ;# ">
+"1384
+[; <" UEP5 equ 0F75h ;# ">
+"1492
+[; <" UEP6 equ 0F76h ;# ">
+"1600
+[; <" UEP7 equ 0F77h ;# ">
+"1708
+[; <" UEP8 equ 0F78h ;# ">
+"1784
+[; <" UEP9 equ 0F79h ;# ">
+"1860
+[; <" UEP10 equ 0F7Ah ;# ">
+"1936
+[; <" UEP11 equ 0F7Bh ;# ">
+"2012
+[; <" UEP12 equ 0F7Ch ;# ">
+"2088
+[; <" UEP13 equ 0F7Dh ;# ">
+"2164
+[; <" UEP14 equ 0F7Eh ;# ">
+"2240
+[; <" UEP15 equ 0F7Fh ;# ">
+"2316
+[; <" PORTA equ 0F80h ;# ">
+"2455
+[; <" PORTB equ 0F81h ;# ">
+"2565
+[; <" PORTC equ 0F82h ;# ">
+"2707
+[; <" PORTD equ 0F83h ;# ">
+"2828
+[; <" PORTE equ 0F84h ;# ">
+"2975
+[; <" LATA equ 0F89h ;# ">
+"3075
+[; <" LATB equ 0F8Ah ;# ">
+"3187
+[; <" LATC equ 0F8Bh ;# ">
+"3265
+[; <" LATD equ 0F8Ch ;# ">
+"3377
+[; <" LATE equ 0F8Dh ;# ">
+"3429
+[; <" TRISA equ 0F92h ;# ">
+"3434
+[; <" DDRA equ 0F92h ;# ">
+"3627
+[; <" TRISB equ 0F93h ;# ">
+"3632
+[; <" DDRB equ 0F93h ;# ">
+"3849
+[; <" TRISC equ 0F94h ;# ">
+"3854
+[; <" DDRC equ 0F94h ;# ">
+"4003
+[; <" TRISD equ 0F95h ;# ">
+"4008
+[; <" DDRD equ 0F95h ;# ">
+"4225
+[; <" TRISE equ 0F96h ;# ">
+"4230
+[; <" DDRE equ 0F96h ;# ">
+"4327
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"4386
+[; <" PIE1 equ 0F9Dh ;# ">
+"4470
+[; <" PIR1 equ 0F9Eh ;# ">
+"4554
+[; <" IPR1 equ 0F9Fh ;# ">
+"4638
+[; <" PIE2 equ 0FA0h ;# ">
+"4709
+[; <" PIR2 equ 0FA1h ;# ">
+"4780
+[; <" IPR2 equ 0FA2h ;# ">
+"4851
+[; <" EECON1 equ 0FA6h ;# ">
+"4917
+[; <" EECON2 equ 0FA7h ;# ">
+"4924
+[; <" EEDATA equ 0FA8h ;# ">
+"4931
+[; <" EEADR equ 0FA9h ;# ">
+"4938
+[; <" RCSTA equ 0FABh ;# ">
+"4943
+[; <" RCSTA1 equ 0FABh ;# ">
+"5148
+[; <" TXSTA equ 0FACh ;# ">
+"5153
+[; <" TXSTA1 equ 0FACh ;# ">
+"5404
+[; <" TXREG equ 0FADh ;# ">
+"5409
+[; <" TXREG1 equ 0FADh ;# ">
+"5416
+[; <" RCREG equ 0FAEh ;# ">
+"5421
+[; <" RCREG1 equ 0FAEh ;# ">
+"5428
+[; <" SPBRG equ 0FAFh ;# ">
+"5433
+[; <" SPBRG1 equ 0FAFh ;# ">
+"5440
+[; <" SPBRGH equ 0FB0h ;# ">
+"5447
+[; <" T3CON equ 0FB1h ;# ">
+"5568
+[; <" TMR3 equ 0FB2h ;# ">
+"5575
+[; <" TMR3L equ 0FB2h ;# ">
+"5582
+[; <" TMR3H equ 0FB3h ;# ">
+"5589
+[; <" CMCON equ 0FB4h ;# ">
+"5679
+[; <" CVRCON equ 0FB5h ;# ">
+"5764
+[; <" ECCP1AS equ 0FB6h ;# ">
+"5769
+[; <" CCP1AS equ 0FB6h ;# ">
+"5926
+[; <" ECCP1DEL equ 0FB7h ;# ">
+"5931
+[; <" CCP1DEL equ 0FB7h ;# ">
+"6064
+[; <" BAUDCON equ 0FB8h ;# ">
+"6069
+[; <" BAUDCTL equ 0FB8h ;# ">
+"6244
+[; <" CCP2CON equ 0FBAh ;# ">
+"6308
+[; <" CCPR2 equ 0FBBh ;# ">
+"6315
+[; <" CCPR2L equ 0FBBh ;# ">
+"6322
+[; <" CCPR2H equ 0FBCh ;# ">
+"6329
+[; <" CCP1CON equ 0FBDh ;# ">
+"6334
+[; <" ECCP1CON equ 0FBDh ;# ">
+"6491
+[; <" CCPR1 equ 0FBEh ;# ">
+"6498
+[; <" CCPR1L equ 0FBEh ;# ">
+"6505
+[; <" CCPR1H equ 0FBFh ;# ">
+"6512
+[; <" ADCON2 equ 0FC0h ;# ">
+"6583
+[; <" ADCON1 equ 0FC1h ;# ">
+"6668
+[; <" ADCON0 equ 0FC2h ;# ">
+"6787
+[; <" ADRES equ 0FC3h ;# ">
+"6794
+[; <" ADRESL equ 0FC3h ;# ">
+"6801
+[; <" ADRESH equ 0FC4h ;# ">
+"6808
+[; <" SSPCON2 equ 0FC5h ;# ">
+"6870
+[; <" SSPCON1 equ 0FC6h ;# ">
+"6940
+[; <" SSPSTAT equ 0FC7h ;# ">
+"7188
+[; <" SSPADD equ 0FC8h ;# ">
+"7195
+[; <" SSPBUF equ 0FC9h ;# ">
+"7202
+[; <" T2CON equ 0FCAh ;# ">
+"7300
+[; <" PR2 equ 0FCBh ;# ">
+"7305
+[; <" MEMCON equ 0FCBh ;# ">
+"7410
+[; <" TMR2 equ 0FCCh ;# ">
+"7417
+[; <" T1CON equ 0FCDh ;# ">
+"7520
+[; <" TMR1 equ 0FCEh ;# ">
+"7527
+[; <" TMR1L equ 0FCEh ;# ">
+"7534
+[; <" TMR1H equ 0FCFh ;# ">
+"7541
+[; <" RCON equ 0FD0h ;# ">
+"7690
+[; <" WDTCON equ 0FD1h ;# ">
+"7718
+[; <" HLVDCON equ 0FD2h ;# ">
+"7723
+[; <" LVDCON equ 0FD2h ;# ">
+"7988
+[; <" OSCCON equ 0FD3h ;# ">
+"8071
+[; <" T0CON equ 0FD5h ;# ">
+"8141
+[; <" TMR0 equ 0FD6h ;# ">
+"8148
+[; <" TMR0L equ 0FD6h ;# ">
+"8155
+[; <" TMR0H equ 0FD7h ;# ">
+"8162
+[; <" STATUS equ 0FD8h ;# ">
+"8233
+[; <" FSR2 equ 0FD9h ;# ">
+"8240
+[; <" FSR2L equ 0FD9h ;# ">
+"8247
+[; <" FSR2H equ 0FDAh ;# ">
+"8254
+[; <" PLUSW2 equ 0FDBh ;# ">
+"8261
+[; <" PREINC2 equ 0FDCh ;# ">
+"8268
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"8275
+[; <" POSTINC2 equ 0FDEh ;# ">
+"8282
+[; <" INDF2 equ 0FDFh ;# ">
+"8289
+[; <" BSR equ 0FE0h ;# ">
+"8296
+[; <" FSR1 equ 0FE1h ;# ">
+"8303
+[; <" FSR1L equ 0FE1h ;# ">
+"8310
+[; <" FSR1H equ 0FE2h ;# ">
+"8317
+[; <" PLUSW1 equ 0FE3h ;# ">
+"8324
+[; <" PREINC1 equ 0FE4h ;# ">
+"8331
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"8338
+[; <" POSTINC1 equ 0FE6h ;# ">
+"8345
+[; <" INDF1 equ 0FE7h ;# ">
+"8352
+[; <" WREG equ 0FE8h ;# ">
+"8359
+[; <" FSR0 equ 0FE9h ;# ">
+"8366
+[; <" FSR0L equ 0FE9h ;# ">
+"8373
+[; <" FSR0H equ 0FEAh ;# ">
+"8380
+[; <" PLUSW0 equ 0FEBh ;# ">
+"8387
+[; <" PREINC0 equ 0FECh ;# ">
+"8394
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"8401
+[; <" POSTINC0 equ 0FEEh ;# ">
+"8408
+[; <" INDF0 equ 0FEFh ;# ">
+"8415
+[; <" INTCON3 equ 0FF0h ;# ">
+"8507
+[; <" INTCON2 equ 0FF1h ;# ">
+"8584
+[; <" INTCON equ 0FF2h ;# ">
+"8701
+[; <" PROD equ 0FF3h ;# ">
+"8708
+[; <" PRODL equ 0FF3h ;# ">
+"8715
+[; <" PRODH equ 0FF4h ;# ">
+"8722
+[; <" TABLAT equ 0FF5h ;# ">
+"8731
+[; <" TBLPTR equ 0FF6h ;# ">
+"8738
+[; <" TBLPTRL equ 0FF6h ;# ">
+"8745
+[; <" TBLPTRH equ 0FF7h ;# ">
+"8752
+[; <" TBLPTRU equ 0FF8h ;# ">
+"8761
+[; <" PCLAT equ 0FF9h ;# ">
+"8768
+[; <" PC equ 0FF9h ;# ">
+"8775
+[; <" PCL equ 0FF9h ;# ">
+"8782
+[; <" PCLATH equ 0FFAh ;# ">
+"8789
+[; <" PCLATU equ 0FFBh ;# ">
+"8796
+[; <" STKPTR equ 0FFCh ;# ">
+"8872
+[; <" TOS equ 0FFDh ;# ">
+"8879
+[; <" TOSL equ 0FFDh ;# ">
+"8886
+[; <" TOSH equ 0FFEh ;# ">
+"8893
+[; <" TOSU equ 0FFFh ;# ">
+"8 ../Proyectoa4550.X/MOTOR.h
+[; ;../Proyectoa4550.X/MOTOR.h: 8: uint8_t banderaaccion;
+[v _banderaaccion `uc ~T0 @X0 1 e ]
+"8 ../Librerias.X\PWM4550.h
+[; ;../Librerias.X\PWM4550.h: 8: uint8_t *PA;
+[v _PA `*uc ~T0 @X0 1 e ]
+"9
+[; ;../Librerias.X\PWM4550.h: 9: uint8_t *PB;
+[v _PB `*uc ~T0 @X0 1 e ]
+"15 ../Proyectoa4550.X/UART50.c
+[; ;../Proyectoa4550.X/UART50.c: 15: void UARTconfi (void) {
+[v _UARTconfi `(v ~T0 @X0 1 ef ]
+{
+[e :U _UARTconfi ]
+[f ]
+"16
+[; ;../Proyectoa4550.X/UART50.c: 16:     ADCON1 = 0x0F;
+[e = _ADCON1 -> -> 15 `i `uc ]
+"18
+[; ;../Proyectoa4550.X/UART50.c: 18:     TRISCbits.RC6 = 1;
+[e = . . _TRISCbits 1 4 -> -> 1 `i `uc ]
+"19
+[; ;../Proyectoa4550.X/UART50.c: 19:     TRISCbits.RC7 = 1;
+[e = . . _TRISCbits 1 5 -> -> 1 `i `uc ]
+"21
+[; ;../Proyectoa4550.X/UART50.c: 21:     TXSTAbits.TX9 = 0;
+[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
+"22
+[; ;../Proyectoa4550.X/UART50.c: 22:     TXSTAbits.TXEN = 1;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+"23
+[; ;../Proyectoa4550.X/UART50.c: 23:     TXSTAbits.SYNC = 0;
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+"24
+[; ;../Proyectoa4550.X/UART50.c: 24:     TXSTAbits.BRGH = 1;
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+"25
+[; ;../Proyectoa4550.X/UART50.c: 25:     BAUDCONbits.BRG16 = 1;
+[e = . . _BAUDCONbits 0 3 -> -> 1 `i `uc ]
+"26
+[; ;../Proyectoa4550.X/UART50.c: 26:     RCSTAbits.RX9 = 0;
+[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
+"27
+[; ;../Proyectoa4550.X/UART50.c: 27:     RCSTAbits.SPEN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+"28
+[; ;../Proyectoa4550.X/UART50.c: 28:     RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"30
+[; ;../Proyectoa4550.X/UART50.c: 30:     SPBRGH1:SPBRG1 = 103;
+[e :U 368 ]
+[e = _SPBRG1 -> -> 103 `i `uc ]
+"31
+[; ;../Proyectoa4550.X/UART50.c: 31: }
+[e :UE 367 ]
+}
+"33
+[; ;../Proyectoa4550.X/UART50.c: 33: void UARTWrite(uint8_t txData) {
+[v _UARTWrite `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _UARTWrite ]
+[v _txData `uc ~T0 @X0 1 r1 ]
+[f ]
+"34
+[; ;../Proyectoa4550.X/UART50.c: 34:     while (!TXSTAbits.TRMT) {
+[e $U 370  ]
+[e :U 371 ]
+{
+"35
+[; ;../Proyectoa4550.X/UART50.c: 35:     }
+}
+[e :U 370 ]
+"34
+[; ;../Proyectoa4550.X/UART50.c: 34:     while (!TXSTAbits.TRMT) {
+[e $ ! != -> . . _TXSTAbits 0 1 `i -> 0 `i 371  ]
+[e :U 372 ]
+"36
+[; ;../Proyectoa4550.X/UART50.c: 36:     TXREG = txData;
+[e = _TXREG _txData ]
+"37
+[; ;../Proyectoa4550.X/UART50.c: 37: }
+[e :UE 369 ]
+}
+"40
+[; ;../Proyectoa4550.X/UART50.c: 40: uint8_t UARTRead(void) {
+[v _UARTRead `(uc ~T0 @X0 1 ef ]
+{
+[e :U _UARTRead ]
+[f ]
+"41
+[; ;../Proyectoa4550.X/UART50.c: 41:     PROBLEMA();
+[e ( _PROBLEMA ..  ]
+"42
+[; ;../Proyectoa4550.X/UART50.c: 42:     uint8_t X=0;
+[v _X `uc ~T0 @X0 1 a ]
+[e = _X -> -> 0 `i `uc ]
+"43
+[; ;../Proyectoa4550.X/UART50.c: 43:     uint32_t Y=0;
+[v _Y `ul ~T0 @X0 1 a ]
+[e = _Y -> -> -> 0 `i `l `ul ]
+"44
+[; ;../Proyectoa4550.X/UART50.c: 44:     while (PIR1bits.RCIF == 0){
+[e $U 374  ]
+[e :U 375 ]
+{
+"45
+[; ;../Proyectoa4550.X/UART50.c: 45:         if(Y>=500000) {
+[e $ ! >= _Y -> -> 500000 `l `ul 377  ]
+{
+"46
+[; ;../Proyectoa4550.X/UART50.c: 46:             return ((void*)0);
+[e ) -> -> -> 0 `i `*v `uc ]
+[e $UE 373  ]
+"47
+[; ;../Proyectoa4550.X/UART50.c: 47:         }
+}
+[e :U 377 ]
+"48
+[; ;../Proyectoa4550.X/UART50.c: 48:         Y++;
+[e ++ _Y -> -> -> 1 `i `l `ul ]
+"49
+[; ;../Proyectoa4550.X/UART50.c: 49:     }
+}
+[e :U 374 ]
+"44
+[; ;../Proyectoa4550.X/UART50.c: 44:     while (PIR1bits.RCIF == 0){
+[e $ == -> . . _PIR1bits 0 5 `i -> 0 `i 375  ]
+[e :U 376 ]
+"50
+[; ;../Proyectoa4550.X/UART50.c: 50:     X = RCREG1;
+[e = _X _RCREG1 ]
+"51
+[; ;../Proyectoa4550.X/UART50.c: 51:     RCREG1 = 0;
+[e = _RCREG1 -> -> 0 `i `uc ]
+"53
+[; ;../Proyectoa4550.X/UART50.c: 53:     return X;
+[e ) _X ]
+[e $UE 373  ]
+"54
+[; ;../Proyectoa4550.X/UART50.c: 54: }
+[e :UE 373 ]
+}
+"56
+[; ;../Proyectoa4550.X/UART50.c: 56: void PROBLEMA(void) {
+[v _PROBLEMA `(v ~T0 @X0 1 ef ]
+{
+[e :U _PROBLEMA ]
+[f ]
+"57
+[; ;../Proyectoa4550.X/UART50.c: 57:     uint8_t temp;
+[v _temp `uc ~T0 @X0 1 a ]
+"58
+[; ;../Proyectoa4550.X/UART50.c: 58:     if(OERR) {
+[e $ ! _OERR 379  ]
+{
+"60
+[; ;../Proyectoa4550.X/UART50.c: 60:         do
+[e :U 382 ]
+"61
+[; ;../Proyectoa4550.X/UART50.c: 61:         {
+{
+"62
+[; ;../Proyectoa4550.X/UART50.c: 62:             temp = RCREG;
+[e = _temp _RCREG ]
+"63
+[; ;../Proyectoa4550.X/UART50.c: 63:             temp = RCREG;
+[e = _temp _RCREG ]
+"64
+[; ;../Proyectoa4550.X/UART50.c: 64:             temp = RCREG;
+[e = _temp _RCREG ]
+"65
+[; ;../Proyectoa4550.X/UART50.c: 65:             CREN = 0;
+[e = _CREN -> -> 0 `i `b ]
+"66
+[; ;../Proyectoa4550.X/UART50.c: 66:             CREN = 1;
+[e = _CREN -> -> 1 `i `b ]
+"68
+[; ;../Proyectoa4550.X/UART50.c: 68:         } while(OERR);
+}
+[e $ _OERR 382  ]
+[e :U 381 ]
+"69
+[; ;../Proyectoa4550.X/UART50.c: 69:     }
+}
+[e :U 379 ]
+"71
+[; ;../Proyectoa4550.X/UART50.c: 71:     if(FERR)
+[e $ ! _FERR 383  ]
+"72
+[; ;../Proyectoa4550.X/UART50.c: 72:     {
+{
+"73
+[; ;../Proyectoa4550.X/UART50.c: 73:         temp = RCREG;
+[e = _temp _RCREG ]
+"74
+[; ;../Proyectoa4550.X/UART50.c: 74:         TXEN = 0;
+[e = _TXEN -> -> 0 `i `b ]
+"75
+[; ;../Proyectoa4550.X/UART50.c: 75:         TXEN = 1;
+[e = _TXEN -> -> 1 `i `b ]
+"76
+[; ;../Proyectoa4550.X/UART50.c: 76:     }
+}
+[e :U 383 ]
+"77
+[; ;../Proyectoa4550.X/UART50.c: 77: }
+[e :UE 378 ]
+}

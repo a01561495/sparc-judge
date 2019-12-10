@@ -1,0 +1,1815 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"5 ../Proyectoa4550.X/UART50.h
+[; ;../Proyectoa4550.X/UART50.h: 5: void UARTWrite(uint8_t txData);
+[v _UARTWrite `(v ~T0 @X0 0 ef1`uc ]
+"6
+[; ;../Proyectoa4550.X/UART50.h: 6: uint8_t UARTRead(void);
+[v _UARTRead `(uc ~T0 @X0 0 ef ]
+"5419 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC18F4550.h
+[v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
+"4474
+[s S178 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S178 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
+"4484
+[s S179 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S179 . . TX1IF RC1IF . PSPIF ]
+"4473
+[u S177 `S178 1 `S179 1 ]
+[n S177 . . . ]
+"4492
+[v _PIR1bits `VS177 ~T0 @X0 0 e@3998 ]
+"4 ../Proyectoa4550.X/EEPROM.h
+[; ;../Proyectoa4550.X/EEPROM.h: 4: uint8_t EEPROM_R(uint8_t dir);
+[v _EEPROM_R `(uc ~T0 @X0 0 ef1`uc ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC18F4550.h
+[; <" SPPDATA equ 0F62h ;# ">
+"74
+[; <" SPPCFG equ 0F63h ;# ">
+"151
+[; <" SPPEPS equ 0F64h ;# ">
+"225
+[; <" SPPCON equ 0F65h ;# ">
+"251
+[; <" UFRM equ 0F66h ;# ">
+"258
+[; <" UFRML equ 0F66h ;# ">
+"336
+[; <" UFRMH equ 0F67h ;# ">
+"376
+[; <" UIR equ 0F68h ;# ">
+"432
+[; <" UIE equ 0F69h ;# ">
+"488
+[; <" UEIR equ 0F6Ah ;# ">
+"539
+[; <" UEIE equ 0F6Bh ;# ">
+"590
+[; <" USTAT equ 0F6Ch ;# ">
+"650
+[; <" UCON equ 0F6Dh ;# ">
+"701
+[; <" UADDR equ 0F6Eh ;# ">
+"765
+[; <" UCFG equ 0F6Fh ;# ">
+"844
+[; <" UEP0 equ 0F70h ;# ">
+"952
+[; <" UEP1 equ 0F71h ;# ">
+"1060
+[; <" UEP2 equ 0F72h ;# ">
+"1168
+[; <" UEP3 equ 0F73h ;# ">
+"1276
+[; <" UEP4 equ 0F74h ;# ">
+"1384
+[; <" UEP5 equ 0F75h ;# ">
+"1492
+[; <" UEP6 equ 0F76h ;# ">
+"1600
+[; <" UEP7 equ 0F77h ;# ">
+"1708
+[; <" UEP8 equ 0F78h ;# ">
+"1784
+[; <" UEP9 equ 0F79h ;# ">
+"1860
+[; <" UEP10 equ 0F7Ah ;# ">
+"1936
+[; <" UEP11 equ 0F7Bh ;# ">
+"2012
+[; <" UEP12 equ 0F7Ch ;# ">
+"2088
+[; <" UEP13 equ 0F7Dh ;# ">
+"2164
+[; <" UEP14 equ 0F7Eh ;# ">
+"2240
+[; <" UEP15 equ 0F7Fh ;# ">
+"2316
+[; <" PORTA equ 0F80h ;# ">
+"2455
+[; <" PORTB equ 0F81h ;# ">
+"2565
+[; <" PORTC equ 0F82h ;# ">
+"2707
+[; <" PORTD equ 0F83h ;# ">
+"2828
+[; <" PORTE equ 0F84h ;# ">
+"2975
+[; <" LATA equ 0F89h ;# ">
+"3075
+[; <" LATB equ 0F8Ah ;# ">
+"3187
+[; <" LATC equ 0F8Bh ;# ">
+"3265
+[; <" LATD equ 0F8Ch ;# ">
+"3377
+[; <" LATE equ 0F8Dh ;# ">
+"3429
+[; <" TRISA equ 0F92h ;# ">
+"3434
+[; <" DDRA equ 0F92h ;# ">
+"3627
+[; <" TRISB equ 0F93h ;# ">
+"3632
+[; <" DDRB equ 0F93h ;# ">
+"3849
+[; <" TRISC equ 0F94h ;# ">
+"3854
+[; <" DDRC equ 0F94h ;# ">
+"4003
+[; <" TRISD equ 0F95h ;# ">
+"4008
+[; <" DDRD equ 0F95h ;# ">
+"4225
+[; <" TRISE equ 0F96h ;# ">
+"4230
+[; <" DDRE equ 0F96h ;# ">
+"4327
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"4386
+[; <" PIE1 equ 0F9Dh ;# ">
+"4470
+[; <" PIR1 equ 0F9Eh ;# ">
+"4554
+[; <" IPR1 equ 0F9Fh ;# ">
+"4638
+[; <" PIE2 equ 0FA0h ;# ">
+"4709
+[; <" PIR2 equ 0FA1h ;# ">
+"4780
+[; <" IPR2 equ 0FA2h ;# ">
+"4851
+[; <" EECON1 equ 0FA6h ;# ">
+"4917
+[; <" EECON2 equ 0FA7h ;# ">
+"4924
+[; <" EEDATA equ 0FA8h ;# ">
+"4931
+[; <" EEADR equ 0FA9h ;# ">
+"4938
+[; <" RCSTA equ 0FABh ;# ">
+"4943
+[; <" RCSTA1 equ 0FABh ;# ">
+"5148
+[; <" TXSTA equ 0FACh ;# ">
+"5153
+[; <" TXSTA1 equ 0FACh ;# ">
+"5404
+[; <" TXREG equ 0FADh ;# ">
+"5409
+[; <" TXREG1 equ 0FADh ;# ">
+"5416
+[; <" RCREG equ 0FAEh ;# ">
+"5421
+[; <" RCREG1 equ 0FAEh ;# ">
+"5428
+[; <" SPBRG equ 0FAFh ;# ">
+"5433
+[; <" SPBRG1 equ 0FAFh ;# ">
+"5440
+[; <" SPBRGH equ 0FB0h ;# ">
+"5447
+[; <" T3CON equ 0FB1h ;# ">
+"5568
+[; <" TMR3 equ 0FB2h ;# ">
+"5575
+[; <" TMR3L equ 0FB2h ;# ">
+"5582
+[; <" TMR3H equ 0FB3h ;# ">
+"5589
+[; <" CMCON equ 0FB4h ;# ">
+"5679
+[; <" CVRCON equ 0FB5h ;# ">
+"5764
+[; <" ECCP1AS equ 0FB6h ;# ">
+"5769
+[; <" CCP1AS equ 0FB6h ;# ">
+"5926
+[; <" ECCP1DEL equ 0FB7h ;# ">
+"5931
+[; <" CCP1DEL equ 0FB7h ;# ">
+"6064
+[; <" BAUDCON equ 0FB8h ;# ">
+"6069
+[; <" BAUDCTL equ 0FB8h ;# ">
+"6244
+[; <" CCP2CON equ 0FBAh ;# ">
+"6308
+[; <" CCPR2 equ 0FBBh ;# ">
+"6315
+[; <" CCPR2L equ 0FBBh ;# ">
+"6322
+[; <" CCPR2H equ 0FBCh ;# ">
+"6329
+[; <" CCP1CON equ 0FBDh ;# ">
+"6334
+[; <" ECCP1CON equ 0FBDh ;# ">
+"6491
+[; <" CCPR1 equ 0FBEh ;# ">
+"6498
+[; <" CCPR1L equ 0FBEh ;# ">
+"6505
+[; <" CCPR1H equ 0FBFh ;# ">
+"6512
+[; <" ADCON2 equ 0FC0h ;# ">
+"6583
+[; <" ADCON1 equ 0FC1h ;# ">
+"6668
+[; <" ADCON0 equ 0FC2h ;# ">
+"6787
+[; <" ADRES equ 0FC3h ;# ">
+"6794
+[; <" ADRESL equ 0FC3h ;# ">
+"6801
+[; <" ADRESH equ 0FC4h ;# ">
+"6808
+[; <" SSPCON2 equ 0FC5h ;# ">
+"6870
+[; <" SSPCON1 equ 0FC6h ;# ">
+"6940
+[; <" SSPSTAT equ 0FC7h ;# ">
+"7188
+[; <" SSPADD equ 0FC8h ;# ">
+"7195
+[; <" SSPBUF equ 0FC9h ;# ">
+"7202
+[; <" T2CON equ 0FCAh ;# ">
+"7300
+[; <" PR2 equ 0FCBh ;# ">
+"7305
+[; <" MEMCON equ 0FCBh ;# ">
+"7410
+[; <" TMR2 equ 0FCCh ;# ">
+"7417
+[; <" T1CON equ 0FCDh ;# ">
+"7520
+[; <" TMR1 equ 0FCEh ;# ">
+"7527
+[; <" TMR1L equ 0FCEh ;# ">
+"7534
+[; <" TMR1H equ 0FCFh ;# ">
+"7541
+[; <" RCON equ 0FD0h ;# ">
+"7690
+[; <" WDTCON equ 0FD1h ;# ">
+"7718
+[; <" HLVDCON equ 0FD2h ;# ">
+"7723
+[; <" LVDCON equ 0FD2h ;# ">
+"7988
+[; <" OSCCON equ 0FD3h ;# ">
+"8071
+[; <" T0CON equ 0FD5h ;# ">
+"8141
+[; <" TMR0 equ 0FD6h ;# ">
+"8148
+[; <" TMR0L equ 0FD6h ;# ">
+"8155
+[; <" TMR0H equ 0FD7h ;# ">
+"8162
+[; <" STATUS equ 0FD8h ;# ">
+"8233
+[; <" FSR2 equ 0FD9h ;# ">
+"8240
+[; <" FSR2L equ 0FD9h ;# ">
+"8247
+[; <" FSR2H equ 0FDAh ;# ">
+"8254
+[; <" PLUSW2 equ 0FDBh ;# ">
+"8261
+[; <" PREINC2 equ 0FDCh ;# ">
+"8268
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"8275
+[; <" POSTINC2 equ 0FDEh ;# ">
+"8282
+[; <" INDF2 equ 0FDFh ;# ">
+"8289
+[; <" BSR equ 0FE0h ;# ">
+"8296
+[; <" FSR1 equ 0FE1h ;# ">
+"8303
+[; <" FSR1L equ 0FE1h ;# ">
+"8310
+[; <" FSR1H equ 0FE2h ;# ">
+"8317
+[; <" PLUSW1 equ 0FE3h ;# ">
+"8324
+[; <" PREINC1 equ 0FE4h ;# ">
+"8331
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"8338
+[; <" POSTINC1 equ 0FE6h ;# ">
+"8345
+[; <" INDF1 equ 0FE7h ;# ">
+"8352
+[; <" WREG equ 0FE8h ;# ">
+"8359
+[; <" FSR0 equ 0FE9h ;# ">
+"8366
+[; <" FSR0L equ 0FE9h ;# ">
+"8373
+[; <" FSR0H equ 0FEAh ;# ">
+"8380
+[; <" PLUSW0 equ 0FEBh ;# ">
+"8387
+[; <" PREINC0 equ 0FECh ;# ">
+"8394
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"8401
+[; <" POSTINC0 equ 0FEEh ;# ">
+"8408
+[; <" INDF0 equ 0FEFh ;# ">
+"8415
+[; <" INTCON3 equ 0FF0h ;# ">
+"8507
+[; <" INTCON2 equ 0FF1h ;# ">
+"8584
+[; <" INTCON equ 0FF2h ;# ">
+"8701
+[; <" PROD equ 0FF3h ;# ">
+"8708
+[; <" PRODL equ 0FF3h ;# ">
+"8715
+[; <" PRODH equ 0FF4h ;# ">
+"8722
+[; <" TABLAT equ 0FF5h ;# ">
+"8731
+[; <" TBLPTR equ 0FF6h ;# ">
+"8738
+[; <" TBLPTRL equ 0FF6h ;# ">
+"8745
+[; <" TBLPTRH equ 0FF7h ;# ">
+"8752
+[; <" TBLPTRU equ 0FF8h ;# ">
+"8761
+[; <" PCLAT equ 0FF9h ;# ">
+"8768
+[; <" PC equ 0FF9h ;# ">
+"8775
+[; <" PCL equ 0FF9h ;# ">
+"8782
+[; <" PCLATH equ 0FFAh ;# ">
+"8789
+[; <" PCLATU equ 0FFBh ;# ">
+"8796
+[; <" STKPTR equ 0FFCh ;# ">
+"8872
+[; <" TOS equ 0FFDh ;# ">
+"8879
+[; <" TOSL equ 0FFDh ;# ">
+"8886
+[; <" TOSH equ 0FFEh ;# ">
+"8893
+[; <" TOSU equ 0FFFh ;# ">
+"8 ../Proyectoa4550.X/MOTOR.h
+[; ;../Proyectoa4550.X/MOTOR.h: 8: uint8_t banderaaccion;
+[v _banderaaccion `uc ~T0 @X0 1 e ]
+"8 ../Librerias.X\PWM4550.h
+[; ;../Librerias.X\PWM4550.h: 8: uint8_t *PA;
+[v _PA `*uc ~T0 @X0 1 e ]
+"9
+[; ;../Librerias.X\PWM4550.h: 9: uint8_t *PB;
+[v _PB `*uc ~T0 @X0 1 e ]
+"22 ../Proyectoa4550.X/Mensajes50.c
+[; ;../Proyectoa4550.X/Mensajes50.c: 22: uint16_t Obt(uint8_t imp) {
+[v _Obt `(us ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Obt ]
+[v _imp `uc ~T0 @X0 1 r1 ]
+[f ]
+"23
+[; ;../Proyectoa4550.X/Mensajes50.c: 23:     uint8_t Xvalor[3];
+[v _Xvalor `uc ~T0 @X0 -> 3 `i a ]
+"24
+[; ;../Proyectoa4550.X/Mensajes50.c: 24:     uint8_t Send;
+[v _Send `uc ~T0 @X0 1 a ]
+"25
+[; ;../Proyectoa4550.X/Mensajes50.c: 25:     uint8_t E=0;
+[v _E `uc ~T0 @X0 1 a ]
+[e = _E -> -> 0 `i `uc ]
+"26
+[; ;../Proyectoa4550.X/Mensajes50.c: 26:     uint16_t valor=0;
+[v _valor `us ~T0 @X0 1 a ]
+[e = _valor -> -> 0 `i `us ]
+"27
+[; ;../Proyectoa4550.X/Mensajes50.c: 27:     UARTWrite(imp);
+[e ( _UARTWrite (1 _imp ]
+"28
+[; ;../Proyectoa4550.X/Mensajes50.c: 28:     Xvalor[0]=UARTRead();
+[e = *U + &U _Xvalor * -> -> -> 0 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux ( _UARTRead ..  ]
+"29
+[; ;../Proyectoa4550.X/Mensajes50.c: 29:     if(Xvalor[0]<='9'&&Xvalor[0]>='0') {
+[e $ ! && <= -> *U + &U _Xvalor * -> -> -> 0 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `ui -> 57 `ui >= -> *U + &U _Xvalor * -> -> -> 0 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `ui -> 48 `ui 370  ]
+{
+"30
+[; ;../Proyectoa4550.X/Mensajes50.c: 30:         Send=Xvalor[0];
+[e = _Send *U + &U _Xvalor * -> -> -> 0 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux ]
+"31
+[; ;../Proyectoa4550.X/Mensajes50.c: 31:         UARTWrite(Send);
+[e ( _UARTWrite (1 _Send ]
+"32
+[; ;../Proyectoa4550.X/Mensajes50.c: 32:     } else {
+}
+[e $U 371  ]
+[e :U 370 ]
+{
+"33
+[; ;../Proyectoa4550.X/Mensajes50.c: 33:         E=1;
+[e = _E -> -> 1 `i `uc ]
+"34
+[; ;../Proyectoa4550.X/Mensajes50.c: 34:     }
+}
+[e :U 371 ]
+"35
+[; ;../Proyectoa4550.X/Mensajes50.c: 35:     if(E!=1) {
+[e $ ! != -> _E `i -> 1 `i 372  ]
+{
+"36
+[; ;../Proyectoa4550.X/Mensajes50.c: 36:         Xvalor[1]=UARTRead();
+[e = *U + &U _Xvalor * -> -> -> 1 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux ( _UARTRead ..  ]
+"37
+[; ;../Proyectoa4550.X/Mensajes50.c: 37:         if(Xvalor[1]<='9'&&Xvalor[1]>='0') {
+[e $ ! && <= -> *U + &U _Xvalor * -> -> -> 1 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `ui -> 57 `ui >= -> *U + &U _Xvalor * -> -> -> 1 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `ui -> 48 `ui 373  ]
+{
+"38
+[; ;../Proyectoa4550.X/Mensajes50.c: 38:             Send=Xvalor[1];
+[e = _Send *U + &U _Xvalor * -> -> -> 1 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux ]
+"39
+[; ;../Proyectoa4550.X/Mensajes50.c: 39:             UARTWrite(Send);
+[e ( _UARTWrite (1 _Send ]
+"40
+[; ;../Proyectoa4550.X/Mensajes50.c: 40:         } else {
+}
+[e $U 374  ]
+[e :U 373 ]
+{
+"41
+[; ;../Proyectoa4550.X/Mensajes50.c: 41:             E=1;
+[e = _E -> -> 1 `i `uc ]
+"42
+[; ;../Proyectoa4550.X/Mensajes50.c: 42:         }
+}
+[e :U 374 ]
+"43
+[; ;../Proyectoa4550.X/Mensajes50.c: 43:     }
+}
+[e :U 372 ]
+"44
+[; ;../Proyectoa4550.X/Mensajes50.c: 44:     if(E!=1) {
+[e $ ! != -> _E `i -> 1 `i 375  ]
+{
+"45
+[; ;../Proyectoa4550.X/Mensajes50.c: 45:         Xvalor[2]=UARTRead();
+[e = *U + &U _Xvalor * -> -> -> 2 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux ( _UARTRead ..  ]
+"46
+[; ;../Proyectoa4550.X/Mensajes50.c: 46:         if(Xvalor[2]<='9'&&Xvalor[2]>='0') {
+[e $ ! && <= -> *U + &U _Xvalor * -> -> -> 2 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `ui -> 57 `ui >= -> *U + &U _Xvalor * -> -> -> 2 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `ui -> 48 `ui 376  ]
+{
+"47
+[; ;../Proyectoa4550.X/Mensajes50.c: 47:             Send=Xvalor[2];
+[e = _Send *U + &U _Xvalor * -> -> -> 2 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux ]
+"48
+[; ;../Proyectoa4550.X/Mensajes50.c: 48:             UARTWrite(Send);
+[e ( _UARTWrite (1 _Send ]
+"49
+[; ;../Proyectoa4550.X/Mensajes50.c: 49:         } else {
+}
+[e $U 377  ]
+[e :U 376 ]
+{
+"50
+[; ;../Proyectoa4550.X/Mensajes50.c: 50:             E=1;
+[e = _E -> -> 1 `i `uc ]
+"51
+[; ;../Proyectoa4550.X/Mensajes50.c: 51:         }
+}
+[e :U 377 ]
+"52
+[; ;../Proyectoa4550.X/Mensajes50.c: 52:     }
+}
+[e :U 375 ]
+"53
+[; ;../Proyectoa4550.X/Mensajes50.c: 53:     if(E==1) {
+[e $ ! == -> _E `i -> 1 `i 378  ]
+{
+"54
+[; ;../Proyectoa4550.X/Mensajes50.c: 54:         valor=60000;
+[e = _valor -> -> 60000 `l `us ]
+"55
+[; ;../Proyectoa4550.X/Mensajes50.c: 55:     }else {
+}
+[e $U 379  ]
+[e :U 378 ]
+{
+"56
+[; ;../Proyectoa4550.X/Mensajes50.c: 56:         valor=((Xvalor[0]-48)*100)+((Xvalor[1]-48)*10)+(Xvalor[2]-48);
+[e = _valor -> + + * - -> *U + &U _Xvalor * -> -> -> 0 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `i -> 48 `i -> 100 `i * - -> *U + &U _Xvalor * -> -> -> 1 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `i -> 48 `i -> 10 `i - -> *U + &U _Xvalor * -> -> -> 2 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `i -> 48 `i `us ]
+"57
+[; ;../Proyectoa4550.X/Mensajes50.c: 57:     }
+}
+[e :U 379 ]
+"58
+[; ;../Proyectoa4550.X/Mensajes50.c: 58:     if(Xvalor[0]==((void*)0)||Xvalor[1]==((void*)0)||Xvalor[2]==((void*)0)) {
+[e $ ! || || == -> -> *U + &U _Xvalor * -> -> -> 0 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `i `*v -> -> 0 `i `*v == -> -> *U + &U _Xvalor * -> -> -> 1 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `i `*v -> -> 0 `i `*v == -> -> *U + &U _Xvalor * -> -> -> 2 `i `ui `ux -> -> # *U &U _Xvalor `ui `ux `i `*v -> -> 0 `i `*v 380  ]
+{
+"59
+[; ;../Proyectoa4550.X/Mensajes50.c: 59:         valor=30000;
+[e = _valor -> -> 30000 `i `us ]
+"60
+[; ;../Proyectoa4550.X/Mensajes50.c: 60:     }
+}
+[e :U 380 ]
+"61
+[; ;../Proyectoa4550.X/Mensajes50.c: 61:     return valor;
+[e ) _valor ]
+[e $UE 369  ]
+"63
+[; ;../Proyectoa4550.X/Mensajes50.c: 63: }
+[e :UE 369 ]
+}
+"67
+[; ;../Proyectoa4550.X/Mensajes50.c: 67: void Menimp (void) {
+[v _Menimp `(v ~T0 @X0 1 ef ]
+{
+[e :U _Menimp ]
+[f ]
+"68
+[; ;../Proyectoa4550.X/Mensajes50.c: 68:     RCREG1 = 0;
+[e = _RCREG1 -> -> 0 `i `uc ]
+"69
+[; ;../Proyectoa4550.X/Mensajes50.c: 69:     PIR1bits.RCIF=0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"70
+[; ;../Proyectoa4550.X/Mensajes50.c: 70:     uint8_t Send;
+[v _Send `uc ~T0 @X0 1 a ]
+[v F3611 `uc ~T0 @X0 -> 3 `i s ]
+[i F3611
+:U ..
+"71
+[; ;../Proyectoa4550.X/Mensajes50.c: 71:     uint8_t comandos[]="CL";
+-> 67 `c
+-> 76 `c
+-> 0 `c
+..
+]
+[v _comandos `uc ~T0 @X0 -> 3 `i a ]
+[e = _comandos F3611 ]
+"72
+[; ;../Proyectoa4550.X/Mensajes50.c: 72:     for(uint8_t i=0; i<(sizeof(comandos)); i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui -> # _comandos `ui 382  ]
+[e $U 383  ]
+[e :U 382 ]
+{
+"73
+[; ;../Proyectoa4550.X/Mensajes50.c: 73:                 Send=comandos[i];
+[e = _Send *U + &U _comandos * -> _i `ux -> -> # *U &U _comandos `ui `ux ]
+"74
+[; ;../Proyectoa4550.X/Mensajes50.c: 74:                 UARTWrite(Send);
+[e ( _UARTWrite (1 _Send ]
+"75
+[; ;../Proyectoa4550.X/Mensajes50.c: 75:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> # _comandos `ui 382  ]
+[e :U 383 ]
+}
+"76
+[; ;../Proyectoa4550.X/Mensajes50.c: 76: }
+[e :UE 381 ]
+}
+"79
+[; ;../Proyectoa4550.X/Mensajes50.c: 79: void imprimirSet(void) {
+[v _imprimirSet `(v ~T0 @X0 1 ef ]
+{
+[e :U _imprimirSet ]
+[f ]
+"80
+[; ;../Proyectoa4550.X/Mensajes50.c: 80:     uint8_t XH=0;
+[v _XH `uc ~T0 @X0 1 a ]
+[e = _XH -> -> 0 `i `uc ]
+"81
+[; ;../Proyectoa4550.X/Mensajes50.c: 81:     uint8_t XL=0;
+[v _XL `uc ~T0 @X0 1 a ]
+[e = _XL -> -> 0 `i `uc ]
+"82
+[; ;../Proyectoa4550.X/Mensajes50.c: 82:     uint16_t X=0;
+[v _X `us ~T0 @X0 1 a ]
+[e = _X -> -> 0 `i `us ]
+"84
+[; ;../Proyectoa4550.X/Mensajes50.c: 84:     uint8_t YH=0;
+[v _YH `uc ~T0 @X0 1 a ]
+[e = _YH -> -> 0 `i `uc ]
+"85
+[; ;../Proyectoa4550.X/Mensajes50.c: 85:     uint8_t YL=0;
+[v _YL `uc ~T0 @X0 1 a ]
+[e = _YL -> -> 0 `i `uc ]
+"86
+[; ;../Proyectoa4550.X/Mensajes50.c: 86:     uint16_t Y=0;
+[v _Y `us ~T0 @X0 1 a ]
+[e = _Y -> -> 0 `i `us ]
+"87
+[; ;../Proyectoa4550.X/Mensajes50.c: 87:     uint8_t i=0;
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[v F3622 `uc ~T0 @X0 -> 14 `i s ]
+[i F3622
+:U ..
+"89
+[; ;../Proyectoa4550.X/Mensajes50.c: 89:     uint8_t Pos[]="X=000 Y=000\n\r";
+-> 88 `c
+-> 61 `c
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 32 `c
+-> 89 `c
+-> 61 `c
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _Pos `uc ~T0 @X0 -> 14 `i a ]
+[e = _Pos F3622 ]
+"90
+[; ;../Proyectoa4550.X/Mensajes50.c: 90:     uint8_t Send;
+[v _Send `uc ~T0 @X0 1 a ]
+"92
+[; ;../Proyectoa4550.X/Mensajes50.c: 92:     while(i<160) {
+[e $U 386  ]
+[e :U 387 ]
+{
+"93
+[; ;../Proyectoa4550.X/Mensajes50.c: 93:         for(uint8_t R=0; R<=3; R++) {
+{
+[v _R `uc ~T0 @X0 1 a ]
+[e = _R -> -> 0 `i `uc ]
+[e $ <= -> _R `i -> 3 `i 389  ]
+[e $U 390  ]
+[e :U 389 ]
+{
+"94
+[; ;../Proyectoa4550.X/Mensajes50.c: 94:             UARTWrite(EEPROM_R((R+i)));
+[e ( _UARTWrite (1 ( _EEPROM_R (1 -> + -> _R `i -> _i `i `uc ]
+"95
+[; ;../Proyectoa4550.X/Mensajes50.c: 95:         }
+}
+[e ++ _R -> -> 1 `i `uc ]
+[e $ <= -> _R `i -> 3 `i 389  ]
+[e :U 390 ]
+}
+"96
+[; ;../Proyectoa4550.X/Mensajes50.c: 96:         UARTWrite(' ');
+[e ( _UARTWrite (1 -> -> 32 `ui `uc ]
+"97
+[; ;../Proyectoa4550.X/Mensajes50.c: 97:         i=i+4;
+[e = _i -> + -> _i `i -> 4 `i `uc ]
+"98
+[; ;../Proyectoa4550.X/Mensajes50.c: 98:         XL=EEPROM_R(i);
+[e = _XL ( _EEPROM_R (1 _i ]
+"99
+[; ;../Proyectoa4550.X/Mensajes50.c: 99:         XH=EEPROM_R((i+1));
+[e = _XH ( _EEPROM_R (1 -> + -> _i `i -> 1 `i `uc ]
+"100
+[; ;../Proyectoa4550.X/Mensajes50.c: 100:         X=(uint16_t)XH;
+[e = _X -> _XH `us ]
+"101
+[; ;../Proyectoa4550.X/Mensajes50.c: 101:         X=X<<8;
+[e = _X -> << -> _X `ui -> 8 `i `us ]
+"102
+[; ;../Proyectoa4550.X/Mensajes50.c: 102:         X=X+XL;
+[e = _X -> + -> _X `ui -> _XL `ui `us ]
+"103
+[; ;../Proyectoa4550.X/Mensajes50.c: 103:         i=i+2;
+[e = _i -> + -> _i `i -> 2 `i `uc ]
+"104
+[; ;../Proyectoa4550.X/Mensajes50.c: 104:         YL=EEPROM_R(i);
+[e = _YL ( _EEPROM_R (1 _i ]
+"105
+[; ;../Proyectoa4550.X/Mensajes50.c: 105:         YH=EEPROM_R((i+1));
+[e = _YH ( _EEPROM_R (1 -> + -> _i `i -> 1 `i `uc ]
+"106
+[; ;../Proyectoa4550.X/Mensajes50.c: 106:         Y=(uint16_t)YH;
+[e = _Y -> _YH `us ]
+"107
+[; ;../Proyectoa4550.X/Mensajes50.c: 107:         Y=Y<<8;
+[e = _Y -> << -> _Y `ui -> 8 `i `us ]
+"108
+[; ;../Proyectoa4550.X/Mensajes50.c: 108:         Y=Y+YL;
+[e = _Y -> + -> _Y `ui -> _YL `ui `us ]
+"110
+[; ;../Proyectoa4550.X/Mensajes50.c: 110:         Pos[2]=(X/100)+'0';
+[e = *U + &U _Pos * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + / -> _X `ui -> -> 100 `i `ui -> 48 `ui `uc ]
+"111
+[; ;../Proyectoa4550.X/Mensajes50.c: 111:         Pos[3]=(X % 100) / 10 + '0';
+[e = *U + &U _Pos * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + / % -> _X `ui -> -> 100 `i `ui -> -> 10 `i `ui -> 48 `ui `uc ]
+"112
+[; ;../Proyectoa4550.X/Mensajes50.c: 112:         Pos[4]=(X % 100) % 10 + '0';
+[e = *U + &U _Pos * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + % % -> _X `ui -> -> 100 `i `ui -> -> 10 `i `ui -> 48 `ui `uc ]
+"113
+[; ;../Proyectoa4550.X/Mensajes50.c: 113:         Pos[8]=(Y/100)+'0';
+[e = *U + &U _Pos * -> -> -> 8 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + / -> _Y `ui -> -> 100 `i `ui -> 48 `ui `uc ]
+"114
+[; ;../Proyectoa4550.X/Mensajes50.c: 114:         Pos[9]=(Y % 100) / 10 + '0';
+[e = *U + &U _Pos * -> -> -> 9 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + / % -> _Y `ui -> -> 100 `i `ui -> -> 10 `i `ui -> 48 `ui `uc ]
+"115
+[; ;../Proyectoa4550.X/Mensajes50.c: 115:         Pos[10]=(Y % 100) % 10 + '0';
+[e = *U + &U _Pos * -> -> -> 10 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + % % -> _Y `ui -> -> 100 `i `ui -> -> 10 `i `ui -> 48 `ui `uc ]
+"116
+[; ;../Proyectoa4550.X/Mensajes50.c: 116:         for(uint8_t i=0; i<(sizeof(Pos)); i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui -> # _Pos `ui 392  ]
+[e $U 393  ]
+[e :U 392 ]
+{
+"117
+[; ;../Proyectoa4550.X/Mensajes50.c: 117:                 Send=Pos[i];
+[e = _Send *U + &U _Pos * -> _i `ux -> -> # *U &U _Pos `ui `ux ]
+"118
+[; ;../Proyectoa4550.X/Mensajes50.c: 118:                 UARTWrite(Send);
+[e ( _UARTWrite (1 _Send ]
+"119
+[; ;../Proyectoa4550.X/Mensajes50.c: 119:         }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> # _Pos `ui 392  ]
+[e :U 393 ]
+}
+"120
+[; ;../Proyectoa4550.X/Mensajes50.c: 120:         i=i+2;
+[e = _i -> + -> _i `i -> 2 `i `uc ]
+"121
+[; ;../Proyectoa4550.X/Mensajes50.c: 121:     }
+}
+[e :U 386 ]
+"92
+[; ;../Proyectoa4550.X/Mensajes50.c: 92:     while(i<160) {
+[e $ < -> _i `i -> 160 `i 387  ]
+[e :U 388 ]
+"122
+[; ;../Proyectoa4550.X/Mensajes50.c: 122: }
+[e :UE 385 ]
+}
+"124
+[; ;../Proyectoa4550.X/Mensajes50.c: 124: void SETNOEX(void) {
+[v _SETNOEX `(v ~T0 @X0 1 ef ]
+{
+[e :U _SETNOEX ]
+[f ]
+[v F3628 `uc ~T0 @X0 -> 24 `i s ]
+[i F3628
+:U ..
+"125
+[; ;../Proyectoa4550.X/Mensajes50.c: 125:     uint8_t F[]="No existe el Setpoint\n\r";
+-> 78 `c
+-> 111 `c
+-> 32 `c
+-> 101 `c
+-> 120 `c
+-> 105 `c
+-> 115 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 101 `c
+-> 108 `c
+-> 32 `c
+-> 83 `c
+-> 101 `c
+-> 116 `c
+-> 112 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 116 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 24 `i a ]
+[e = _F F3628 ]
+"126
+[; ;../Proyectoa4550.X/Mensajes50.c: 126:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 396  ]
+[e $U 397  ]
+[e :U 396 ]
+{
+"127
+[; ;../Proyectoa4550.X/Mensajes50.c: 127:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"128
+[; ;../Proyectoa4550.X/Mensajes50.c: 128:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 396  ]
+[e :U 397 ]
+}
+"129
+[; ;../Proyectoa4550.X/Mensajes50.c: 129: }
+[e :UE 395 ]
+}
+"131
+[; ;../Proyectoa4550.X/Mensajes50.c: 131: void SETPOINEXIST(void) {
+[v _SETPOINEXIST `(v ~T0 @X0 1 ef ]
+{
+[e :U _SETPOINEXIST ]
+[f ]
+[v F3632 `uc ~T0 @X0 -> 27 `i s ]
+[i F3632
+:U ..
+"132
+[; ;../Proyectoa4550.X/Mensajes50.c: 132:     uint8_t F[]="Ya existe esta direccion\n\r";
+-> 89 `c
+-> 97 `c
+-> 32 `c
+-> 101 `c
+-> 120 `c
+-> 105 `c
+-> 115 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 101 `c
+-> 115 `c
+-> 116 `c
+-> 97 `c
+-> 32 `c
+-> 100 `c
+-> 105 `c
+-> 114 `c
+-> 101 `c
+-> 99 `c
+-> 99 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 27 `i a ]
+[e = _F F3632 ]
+"133
+[; ;../Proyectoa4550.X/Mensajes50.c: 133:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 400  ]
+[e $U 401  ]
+[e :U 400 ]
+{
+"134
+[; ;../Proyectoa4550.X/Mensajes50.c: 134:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"135
+[; ;../Proyectoa4550.X/Mensajes50.c: 135:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 400  ]
+[e :U 401 ]
+}
+"136
+[; ;../Proyectoa4550.X/Mensajes50.c: 136: }
+[e :UE 399 ]
+}
+"138
+[; ;../Proyectoa4550.X/Mensajes50.c: 138: void Mensaje_comando_completado(void) {
+[v _Mensaje_comando_completado `(v ~T0 @X0 1 ef ]
+{
+[e :U _Mensaje_comando_completado ]
+[f ]
+"139
+[; ;../Proyectoa4550.X/Mensajes50.c: 139:     RCREG1 = 0;
+[e = _RCREG1 -> -> 0 `i `uc ]
+"140
+[; ;../Proyectoa4550.X/Mensajes50.c: 140:     PIR1bits.RCIF=0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[v F3636 `uc ~T0 @X0 -> 2 `i s ]
+[i F3636
+:U ..
+"141
+[; ;../Proyectoa4550.X/Mensajes50.c: 141:     uint8_t F[]="R";
+-> 82 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 2 `i a ]
+[e = _F F3636 ]
+"142
+[; ;../Proyectoa4550.X/Mensajes50.c: 142:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 404  ]
+[e $U 405  ]
+[e :U 404 ]
+{
+"143
+[; ;../Proyectoa4550.X/Mensajes50.c: 143:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"144
+[; ;../Proyectoa4550.X/Mensajes50.c: 144:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 404  ]
+[e :U 405 ]
+}
+"145
+[; ;../Proyectoa4550.X/Mensajes50.c: 145: }
+[e :UE 403 ]
+}
+"148
+[; ;../Proyectoa4550.X/Mensajes50.c: 148: void NOHAYESPACIO(void) {
+[v _NOHAYESPACIO `(v ~T0 @X0 1 ef ]
+{
+[e :U _NOHAYESPACIO ]
+[f ]
+[v F3640 `uc ~T0 @X0 -> 39 `i s ]
+[i F3640
+:U ..
+"149
+[; ;../Proyectoa4550.X/Mensajes50.c: 149:     uint8_t F[]="No puedes escribir mas instrucciones\n\r";
+-> 78 `c
+-> 111 `c
+-> 32 `c
+-> 112 `c
+-> 117 `c
+-> 101 `c
+-> 100 `c
+-> 101 `c
+-> 115 `c
+-> 32 `c
+-> 101 `c
+-> 115 `c
+-> 99 `c
+-> 114 `c
+-> 105 `c
+-> 98 `c
+-> 105 `c
+-> 114 `c
+-> 32 `c
+-> 109 `c
+-> 97 `c
+-> 115 `c
+-> 32 `c
+-> 105 `c
+-> 110 `c
+-> 115 `c
+-> 116 `c
+-> 114 `c
+-> 117 `c
+-> 99 `c
+-> 99 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
+-> 101 `c
+-> 115 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 39 `i a ]
+[e = _F F3640 ]
+"150
+[; ;../Proyectoa4550.X/Mensajes50.c: 150:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 408  ]
+[e $U 409  ]
+[e :U 408 ]
+{
+"151
+[; ;../Proyectoa4550.X/Mensajes50.c: 151:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"152
+[; ;../Proyectoa4550.X/Mensajes50.c: 152:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 408  ]
+[e :U 409 ]
+}
+"153
+[; ;../Proyectoa4550.X/Mensajes50.c: 153: }
+[e :UE 407 ]
+}
+"155
+[; ;../Proyectoa4550.X/Mensajes50.c: 155: void MENUINS(void) {
+[v _MENUINS `(v ~T0 @X0 1 ef ]
+{
+[e :U _MENUINS ]
+[f ]
+[v F3644 `uc ~T0 @X0 -> 32 `i s ]
+[i F3644
+:U ..
+"156
+[; ;../Proyectoa4550.X/Mensajes50.c: 156:     uint8_t F[]="1Movimiento 2Accion 3Terminar\n\r";
+-> 49 `c
+-> 77 `c
+-> 111 `c
+-> 118 `c
+-> 105 `c
+-> 109 `c
+-> 105 `c
+-> 101 `c
+-> 110 `c
+-> 116 `c
+-> 111 `c
+-> 32 `c
+-> 50 `c
+-> 65 `c
+-> 99 `c
+-> 99 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 51 `c
+-> 84 `c
+-> 101 `c
+-> 114 `c
+-> 109 `c
+-> 105 `c
+-> 110 `c
+-> 97 `c
+-> 114 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 32 `i a ]
+[e = _F F3644 ]
+"157
+[; ;../Proyectoa4550.X/Mensajes50.c: 157:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 412  ]
+[e $U 413  ]
+[e :U 412 ]
+{
+"158
+[; ;../Proyectoa4550.X/Mensajes50.c: 158:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"159
+[; ;../Proyectoa4550.X/Mensajes50.c: 159:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 412  ]
+[e :U 413 ]
+}
+"160
+[; ;../Proyectoa4550.X/Mensajes50.c: 160: }
+[e :UE 411 ]
+}
+"161
+[; ;../Proyectoa4550.X/Mensajes50.c: 161: void PREGUNTA(void) {
+[v _PREGUNTA `(v ~T0 @X0 1 ef ]
+{
+[e :U _PREGUNTA ]
+[f ]
+[v F3648 `uc ~T0 @X0 -> 55 `i s ]
+[i F3648
+:U ..
+"162
+[; ;../Proyectoa4550.X/Mensajes50.c: 162:     uint8_t F[]="Borraras la instruccion actual Estas seguro? 1Si 2No\n\r";
+-> 66 `c
+-> 111 `c
+-> 114 `c
+-> 114 `c
+-> 97 `c
+-> 114 `c
+-> 97 `c
+-> 115 `c
+-> 32 `c
+-> 108 `c
+-> 97 `c
+-> 32 `c
+-> 105 `c
+-> 110 `c
+-> 115 `c
+-> 116 `c
+-> 114 `c
+-> 117 `c
+-> 99 `c
+-> 99 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 97 `c
+-> 99 `c
+-> 116 `c
+-> 117 `c
+-> 97 `c
+-> 108 `c
+-> 32 `c
+-> 69 `c
+-> 115 `c
+-> 116 `c
+-> 97 `c
+-> 115 `c
+-> 32 `c
+-> 115 `c
+-> 101 `c
+-> 103 `c
+-> 117 `c
+-> 114 `c
+-> 111 `c
+-> 63 `c
+-> 32 `c
+-> 49 `c
+-> 83 `c
+-> 105 `c
+-> 32 `c
+-> 50 `c
+-> 78 `c
+-> 111 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 55 `i a ]
+[e = _F F3648 ]
+"163
+[; ;../Proyectoa4550.X/Mensajes50.c: 163:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 416  ]
+[e $U 417  ]
+[e :U 416 ]
+{
+"164
+[; ;../Proyectoa4550.X/Mensajes50.c: 164:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"165
+[; ;../Proyectoa4550.X/Mensajes50.c: 165:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 416  ]
+[e :U 417 ]
+}
+"166
+[; ;../Proyectoa4550.X/Mensajes50.c: 166: }
+[e :UE 415 ]
+}
+"168
+[; ;../Proyectoa4550.X/Mensajes50.c: 168: void IMP_ACCION(void) {
+[v _IMP_ACCION `(v ~T0 @X0 1 ef ]
+{
+[e :U _IMP_ACCION ]
+[f ]
+[v F3652 `uc ~T0 @X0 -> 9 `i s ]
+[i F3652
+:U ..
+"169
+[; ;../Proyectoa4550.X/Mensajes50.c: 169:     uint8_t F[]="Accion\n\r";
+-> 65 `c
+-> 99 `c
+-> 99 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 9 `i a ]
+[e = _F F3652 ]
+"170
+[; ;../Proyectoa4550.X/Mensajes50.c: 170:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 420  ]
+[e $U 421  ]
+[e :U 420 ]
+{
+"171
+[; ;../Proyectoa4550.X/Mensajes50.c: 171:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"172
+[; ;../Proyectoa4550.X/Mensajes50.c: 172:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 420  ]
+[e :U 421 ]
+}
+"173
+[; ;../Proyectoa4550.X/Mensajes50.c: 173: }
+[e :UE 419 ]
+}
+"175
+[; ;../Proyectoa4550.X/Mensajes50.c: 175: void imprimirINS(void) {
+[v _imprimirINS `(v ~T0 @X0 1 ef ]
+{
+[e :U _imprimirINS ]
+[f ]
+"176
+[; ;../Proyectoa4550.X/Mensajes50.c: 176:     uint8_t i=160;
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 160 `i `uc ]
+"177
+[; ;../Proyectoa4550.X/Mensajes50.c: 177:     uint8_t suma=0;
+[v _suma `uc ~T0 @X0 1 a ]
+[e = _suma -> -> 0 `i `uc ]
+"178
+[; ;../Proyectoa4550.X/Mensajes50.c: 178:     uint8_t DATA=5;
+[v _DATA `uc ~T0 @X0 1 a ]
+[e = _DATA -> -> 5 `i `uc ]
+"180
+[; ;../Proyectoa4550.X/Mensajes50.c: 180:     while(i<252&&DATA!=0) {
+[e $U 424  ]
+[e :U 425 ]
+{
+"181
+[; ;../Proyectoa4550.X/Mensajes50.c: 181:         DATA=EEPROM_R(i);
+[e = _DATA ( _EEPROM_R (1 _i ]
+"183
+[; ;../Proyectoa4550.X/Mensajes50.c: 183:         if(DATA!=20&&DATA<252) {
+[e $ ! && != -> _DATA `i -> 20 `i < -> _DATA `i -> 252 `i 427  ]
+{
+"184
+[; ;../Proyectoa4550.X/Mensajes50.c: 184:            for(uint8_t R=0; R<=3; R++) {
+{
+[v _R `uc ~T0 @X0 1 a ]
+[e = _R -> -> 0 `i `uc ]
+[e $ <= -> _R `i -> 3 `i 428  ]
+[e $U 429  ]
+[e :U 428 ]
+{
+"185
+[; ;../Proyectoa4550.X/Mensajes50.c: 185:                 suma=i+R;
+[e = _suma -> + -> _i `i -> _R `i `uc ]
+"186
+[; ;../Proyectoa4550.X/Mensajes50.c: 186:                 UARTWrite(EEPROM_R(suma));
+[e ( _UARTWrite (1 ( _EEPROM_R (1 _suma ]
+"187
+[; ;../Proyectoa4550.X/Mensajes50.c: 187:            }
+}
+[e ++ _R -> -> 1 `i `uc ]
+[e $ <= -> _R `i -> 3 `i 428  ]
+[e :U 429 ]
+}
+"188
+[; ;../Proyectoa4550.X/Mensajes50.c: 188:            i=i+4;
+[e = _i -> + -> _i `i -> 4 `i `uc ]
+"189
+[; ;../Proyectoa4550.X/Mensajes50.c: 189:            UARTWrite('\n');
+[e ( _UARTWrite (1 -> -> 10 `ui `uc ]
+"190
+[; ;../Proyectoa4550.X/Mensajes50.c: 190:            UARTWrite('\r');
+[e ( _UARTWrite (1 -> -> 13 `ui `uc ]
+"191
+[; ;../Proyectoa4550.X/Mensajes50.c: 191:         } else if(DATA) {
+}
+[e $U 431  ]
+[e :U 427 ]
+[e $ ! != -> _DATA `i -> 0 `i 432  ]
+{
+"192
+[; ;../Proyectoa4550.X/Mensajes50.c: 192:             IMP_ACCION();
+[e ( _IMP_ACCION ..  ]
+"193
+[; ;../Proyectoa4550.X/Mensajes50.c: 193:             i++;
+[e ++ _i -> -> 1 `i `uc ]
+"194
+[; ;../Proyectoa4550.X/Mensajes50.c: 194:         }
+}
+[e :U 432 ]
+[e :U 431 ]
+"196
+[; ;../Proyectoa4550.X/Mensajes50.c: 196:     }
+}
+[e :U 424 ]
+"180
+[; ;../Proyectoa4550.X/Mensajes50.c: 180:     while(i<252&&DATA!=0) {
+[e $ && < -> _i `i -> 252 `i != -> _DATA `i -> 0 `i 425  ]
+[e :U 426 ]
+"197
+[; ;../Proyectoa4550.X/Mensajes50.c: 197: }
+[e :UE 423 ]
+}
+"199
+[; ;../Proyectoa4550.X/Mensajes50.c: 199: void PREGUNTA2(void) {
+[v _PREGUNTA2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _PREGUNTA2 ]
+[f ]
+[v F3661 `uc ~T0 @X0 -> 58 `i s ]
+[i F3661
+:U ..
+"200
+[; ;../Proyectoa4550.X/Mensajes50.c: 200:     uint8_t F[]="Esta es la instruccion a ejecutar Estas seguro? 1Si 2No\n\r";
+-> 69 `c
+-> 115 `c
+-> 116 `c
+-> 97 `c
+-> 32 `c
+-> 101 `c
+-> 115 `c
+-> 32 `c
+-> 108 `c
+-> 97 `c
+-> 32 `c
+-> 105 `c
+-> 110 `c
+-> 115 `c
+-> 116 `c
+-> 114 `c
+-> 117 `c
+-> 99 `c
+-> 99 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 97 `c
+-> 32 `c
+-> 101 `c
+-> 106 `c
+-> 101 `c
+-> 99 `c
+-> 117 `c
+-> 116 `c
+-> 97 `c
+-> 114 `c
+-> 32 `c
+-> 69 `c
+-> 115 `c
+-> 116 `c
+-> 97 `c
+-> 115 `c
+-> 32 `c
+-> 115 `c
+-> 101 `c
+-> 103 `c
+-> 117 `c
+-> 114 `c
+-> 111 `c
+-> 63 `c
+-> 32 `c
+-> 49 `c
+-> 83 `c
+-> 105 `c
+-> 32 `c
+-> 50 `c
+-> 78 `c
+-> 111 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 58 `i a ]
+[e = _F F3661 ]
+"201
+[; ;../Proyectoa4550.X/Mensajes50.c: 201:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 434  ]
+[e $U 435  ]
+[e :U 434 ]
+{
+"202
+[; ;../Proyectoa4550.X/Mensajes50.c: 202:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"203
+[; ;../Proyectoa4550.X/Mensajes50.c: 203:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 434  ]
+[e :U 435 ]
+}
+"204
+[; ;../Proyectoa4550.X/Mensajes50.c: 204: }
+[e :UE 433 ]
+}
+"206
+[; ;../Proyectoa4550.X/Mensajes50.c: 206: void LIMITEX(void) {
+[v _LIMITEX `(v ~T0 @X0 1 ef ]
+{
+[e :U _LIMITEX ]
+[f ]
+[v F3665 `uc ~T0 @X0 -> 14 `i s ]
+[i F3665
+:U ..
+"207
+[; ;../Proyectoa4550.X/Mensajes50.c: 207:     uint8_t F[]="LIMITE EN X\n\r";
+-> 76 `c
+-> 73 `c
+-> 77 `c
+-> 73 `c
+-> 84 `c
+-> 69 `c
+-> 32 `c
+-> 69 `c
+-> 78 `c
+-> 32 `c
+-> 88 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 14 `i a ]
+[e = _F F3665 ]
+"208
+[; ;../Proyectoa4550.X/Mensajes50.c: 208:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 438  ]
+[e $U 439  ]
+[e :U 438 ]
+{
+"209
+[; ;../Proyectoa4550.X/Mensajes50.c: 209:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"210
+[; ;../Proyectoa4550.X/Mensajes50.c: 210:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 438  ]
+[e :U 439 ]
+}
+"211
+[; ;../Proyectoa4550.X/Mensajes50.c: 211: }
+[e :UE 437 ]
+}
+"213
+[; ;../Proyectoa4550.X/Mensajes50.c: 213: void LIMITEY(void) {
+[v _LIMITEY `(v ~T0 @X0 1 ef ]
+{
+[e :U _LIMITEY ]
+[f ]
+[v F3669 `uc ~T0 @X0 -> 14 `i s ]
+[i F3669
+:U ..
+"214
+[; ;../Proyectoa4550.X/Mensajes50.c: 214:     uint8_t F[]="LIMITE EN Y\n\r";
+-> 76 `c
+-> 73 `c
+-> 77 `c
+-> 73 `c
+-> 84 `c
+-> 69 `c
+-> 32 `c
+-> 69 `c
+-> 78 `c
+-> 32 `c
+-> 89 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 14 `i a ]
+[e = _F F3669 ]
+"215
+[; ;../Proyectoa4550.X/Mensajes50.c: 215:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 442  ]
+[e $U 443  ]
+[e :U 442 ]
+{
+"216
+[; ;../Proyectoa4550.X/Mensajes50.c: 216:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"217
+[; ;../Proyectoa4550.X/Mensajes50.c: 217:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 442  ]
+[e :U 443 ]
+}
+"218
+[; ;../Proyectoa4550.X/Mensajes50.c: 218: }
+[e :UE 441 ]
+}
+"219
+[; ;../Proyectoa4550.X/Mensajes50.c: 219: void PARO2(void) {
+[v _PARO2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _PARO2 ]
+[f ]
+[v F3673 `uc ~T0 @X0 -> 27 `i s ]
+[i F3673
+:U ..
+"220
+[; ;../Proyectoa4550.X/Mensajes50.c: 220:     uint8_t F[]="BOTON DE PARO PRESIONADO\n\r";
+-> 66 `c
+-> 79 `c
+-> 84 `c
+-> 79 `c
+-> 78 `c
+-> 32 `c
+-> 68 `c
+-> 69 `c
+-> 32 `c
+-> 80 `c
+-> 65 `c
+-> 82 `c
+-> 79 `c
+-> 32 `c
+-> 80 `c
+-> 82 `c
+-> 69 `c
+-> 83 `c
+-> 73 `c
+-> 79 `c
+-> 78 `c
+-> 65 `c
+-> 68 `c
+-> 79 `c
+-> 10 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 27 `i a ]
+[e = _F F3673 ]
+"221
+[; ;../Proyectoa4550.X/Mensajes50.c: 221:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 446  ]
+[e $U 447  ]
+[e :U 446 ]
+{
+"222
+[; ;../Proyectoa4550.X/Mensajes50.c: 222:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"223
+[; ;../Proyectoa4550.X/Mensajes50.c: 223:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 446  ]
+[e :U 447 ]
+}
+"224
+[; ;../Proyectoa4550.X/Mensajes50.c: 224: }
+[e :UE 445 ]
+}
+"226
+[; ;../Proyectoa4550.X/Mensajes50.c: 226: void NOcomando(void) {
+[v _NOcomando `(v ~T0 @X0 1 ef ]
+{
+[e :U _NOcomando ]
+[f ]
+[v F3677 `uc ~T0 @X0 -> 3 `i s ]
+[i F3677
+:U ..
+"227
+[; ;../Proyectoa4550.X/Mensajes50.c: 227:     uint8_t F[]="E0";
+-> 69 `c
+-> 48 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 3 `i a ]
+[e = _F F3677 ]
+"228
+[; ;../Proyectoa4550.X/Mensajes50.c: 228:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 450  ]
+[e $U 451  ]
+[e :U 450 ]
+{
+"229
+[; ;../Proyectoa4550.X/Mensajes50.c: 229:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"230
+[; ;../Proyectoa4550.X/Mensajes50.c: 230:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 450  ]
+[e :U 451 ]
+}
+"231
+[; ;../Proyectoa4550.X/Mensajes50.c: 231: }
+[e :UE 449 ]
+}
+"232
+[; ;../Proyectoa4550.X/Mensajes50.c: 232: void NOcoordenada(void) {
+[v _NOcoordenada `(v ~T0 @X0 1 ef ]
+{
+[e :U _NOcoordenada ]
+[f ]
+[v F3681 `uc ~T0 @X0 -> 3 `i s ]
+[i F3681
+:U ..
+"233
+[; ;../Proyectoa4550.X/Mensajes50.c: 233:     uint8_t F[]="E1";
+-> 69 `c
+-> 49 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 3 `i a ]
+[e = _F F3681 ]
+"234
+[; ;../Proyectoa4550.X/Mensajes50.c: 234:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 454  ]
+[e $U 455  ]
+[e :U 454 ]
+{
+"235
+[; ;../Proyectoa4550.X/Mensajes50.c: 235:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"236
+[; ;../Proyectoa4550.X/Mensajes50.c: 236:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 454  ]
+[e :U 455 ]
+}
+"237
+[; ;../Proyectoa4550.X/Mensajes50.c: 237: }
+[e :UE 453 ]
+}
+"239
+[; ;../Proyectoa4550.X/Mensajes50.c: 239: void OCUPADO(void) {
+[v _OCUPADO `(v ~T0 @X0 1 ef ]
+{
+[e :U _OCUPADO ]
+[f ]
+[v F3685 `uc ~T0 @X0 -> 2 `i s ]
+[i F3685
+:U ..
+"240
+[; ;../Proyectoa4550.X/Mensajes50.c: 240:     uint8_t F[]="B";
+-> 66 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 2 `i a ]
+[e = _F F3685 ]
+"241
+[; ;../Proyectoa4550.X/Mensajes50.c: 241:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 458  ]
+[e $U 459  ]
+[e :U 458 ]
+{
+"242
+[; ;../Proyectoa4550.X/Mensajes50.c: 242:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"243
+[; ;../Proyectoa4550.X/Mensajes50.c: 243:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 458  ]
+[e :U 459 ]
+}
+"244
+[; ;../Proyectoa4550.X/Mensajes50.c: 244: }
+[e :UE 457 ]
+}
+"246
+[; ;../Proyectoa4550.X/Mensajes50.c: 246: void COORReal (uint16_t Xvalora,uint16_t Yvalora) {
+[v _COORReal `(v ~T0 @X0 1 ef2`us`us ]
+{
+[e :U _COORReal ]
+[v _Xvalora `us ~T0 @X0 1 r1 ]
+[v _Yvalora `us ~T0 @X0 1 r2 ]
+[f ]
+"247
+[; ;../Proyectoa4550.X/Mensajes50.c: 247:     uint8_t Send;
+[v _Send `uc ~T0 @X0 1 a ]
+[v F3692 `uc ~T0 @X0 -> 12 `i s ]
+[i F3692
+:U ..
+"248
+[; ;../Proyectoa4550.X/Mensajes50.c: 248:     uint8_t Pos[]="X=000 Y=000";
+-> 88 `c
+-> 61 `c
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 32 `c
+-> 89 `c
+-> 61 `c
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+[v _Pos `uc ~T0 @X0 -> 12 `i a ]
+[e = _Pos F3692 ]
+"249
+[; ;../Proyectoa4550.X/Mensajes50.c: 249:     Pos[2]=(Xvalora/100)+'0';
+[e = *U + &U _Pos * -> -> -> 2 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + / -> _Xvalora `ui -> -> 100 `i `ui -> 48 `ui `uc ]
+"250
+[; ;../Proyectoa4550.X/Mensajes50.c: 250:     Pos[3]=(Xvalora % 100) / 10 + '0';
+[e = *U + &U _Pos * -> -> -> 3 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + / % -> _Xvalora `ui -> -> 100 `i `ui -> -> 10 `i `ui -> 48 `ui `uc ]
+"251
+[; ;../Proyectoa4550.X/Mensajes50.c: 251:     Pos[4]=(Xvalora % 100) % 10 + '0';
+[e = *U + &U _Pos * -> -> -> 4 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + % % -> _Xvalora `ui -> -> 100 `i `ui -> -> 10 `i `ui -> 48 `ui `uc ]
+"252
+[; ;../Proyectoa4550.X/Mensajes50.c: 252:     Pos[8]=(Yvalora/100)+'0';
+[e = *U + &U _Pos * -> -> -> 8 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + / -> _Yvalora `ui -> -> 100 `i `ui -> 48 `ui `uc ]
+"253
+[; ;../Proyectoa4550.X/Mensajes50.c: 253:     Pos[9]=(Yvalora % 100) / 10 + '0';
+[e = *U + &U _Pos * -> -> -> 9 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + / % -> _Yvalora `ui -> -> 100 `i `ui -> -> 10 `i `ui -> 48 `ui `uc ]
+"254
+[; ;../Proyectoa4550.X/Mensajes50.c: 254:     Pos[10]=(Yvalora % 100) % 10 + '0';
+[e = *U + &U _Pos * -> -> -> 10 `i `ui `ux -> -> # *U &U _Pos `ui `ux -> + % % -> _Yvalora `ui -> -> 100 `i `ui -> -> 10 `i `ui -> 48 `ui `uc ]
+"255
+[; ;../Proyectoa4550.X/Mensajes50.c: 255:     for(uint8_t i=0; i<(sizeof(Pos)); i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui -> # _Pos `ui 462  ]
+[e $U 463  ]
+[e :U 462 ]
+{
+"256
+[; ;../Proyectoa4550.X/Mensajes50.c: 256:                 Send=Pos[i];
+[e = _Send *U + &U _Pos * -> _i `ux -> -> # *U &U _Pos `ui `ux ]
+"257
+[; ;../Proyectoa4550.X/Mensajes50.c: 257:                 UARTWrite(Send);
+[e ( _UARTWrite (1 _Send ]
+"258
+[; ;../Proyectoa4550.X/Mensajes50.c: 258:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> # _Pos `ui 462  ]
+[e :U 463 ]
+}
+"259
+[; ;../Proyectoa4550.X/Mensajes50.c: 259: }
+[e :UE 461 ]
+}
+"260
+[; ;../Proyectoa4550.X/Mensajes50.c: 260: void Tardanza(void) {
+[v _Tardanza `(v ~T0 @X0 1 ef ]
+{
+[e :U _Tardanza ]
+[f ]
+[v F3696 `uc ~T0 @X0 -> 3 `i s ]
+[i F3696
+:U ..
+"261
+[; ;../Proyectoa4550.X/Mensajes50.c: 261:     uint8_t F[]="E2";
+-> 69 `c
+-> 50 `c
+-> 0 `c
+..
+]
+[v _F `uc ~T0 @X0 -> 3 `i a ]
+[e = _F F3696 ]
+"262
+[; ;../Proyectoa4550.X/Mensajes50.c: 262:     for(uint8_t C=0; C<(sizeof(F)); C++) {
+{
+[v _C `uc ~T0 @X0 1 a ]
+[e = _C -> -> 0 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 466  ]
+[e $U 467  ]
+[e :U 466 ]
+{
+"263
+[; ;../Proyectoa4550.X/Mensajes50.c: 263:             UARTWrite(F[C]);
+[e ( _UARTWrite (1 *U + &U _F * -> _C `ux -> -> # *U &U _F `ui `ux ]
+"264
+[; ;../Proyectoa4550.X/Mensajes50.c: 264:     }
+}
+[e ++ _C -> -> 1 `i `uc ]
+[e $ < -> _C `ui -> # _F `ui 466  ]
+[e :U 467 ]
+}
+"265
+[; ;../Proyectoa4550.X/Mensajes50.c: 265: }
+[e :UE 465 ]
+}

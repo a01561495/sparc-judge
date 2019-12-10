@@ -1,0 +1,1079 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[t ~ __interrupt . k ]
+[t T36 __interrupt ]
+[v F3152 `(v ~T0 @X0 1 tf1`ul ]
+"187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
+[v __delay `JF3152 ~T0 @X0 0 e ]
+[p i __delay ]
+"8419 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC18F4550.h
+[s S353 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S353 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
+"8429
+[s S354 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S354 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
+"8418
+[u S352 `S353 1 `S354 1 ]
+[n S352 . . . ]
+"8440
+[v _INTCON3bits `VS352 ~T0 @X0 0 e@4080 ]
+"2459
+[s S107 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S107 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"2469
+[s S108 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S108 . INT0 INT1 INT2 . PGM PGC PGD ]
+"2478
+[s S109 :3 `uc 1 :1 `uc 1 ]
+[n S109 . . CCP2_PA2 ]
+"2458
+[u S106 `S107 1 `S108 1 `S109 1 ]
+[n S106 . . . . ]
+"2483
+[v _PORTBbits `VS106 ~T0 @X0 0 e@3969 ]
+"4 ../Proyectoa4550.X/interrupcciones.h
+[; ;../Proyectoa4550.X/interrupcciones.h: 4: void interrupcionX(void);
+[v _interrupcionX `(v ~T0 @X0 0 ef ]
+"4 ../Proyectoa4550.X/MOTOR.h
+[v _motoresmov `(v ~T0 @X0 0 ef2`s`s ]
+"8588 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC18F4550.h
+[s S360 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S360 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"8598
+[s S361 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S361 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"8608
+[s S362 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S362 . . GIEL GIEH ]
+"8587
+[u S359 `S360 1 `S361 1 `S362 1 ]
+[n S359 . . . . ]
+"8614
+[v _INTCONbits `VS359 ~T0 @X0 0 e@4082 ]
+"5 ../Proyectoa4550.X/interrupcciones.h
+[; ;../Proyectoa4550.X/interrupcciones.h: 5: void interrupcionY(void);
+[v _interrupcionY `(v ~T0 @X0 0 ef ]
+"6
+[; ;../Proyectoa4550.X/interrupcciones.h: 6: void PARO2aden(void);
+[v _PARO2aden `(v ~T0 @X0 0 ef ]
+"7
+[; ;../Proyectoa4550.X/interrupcciones.h: 7: void PARO2out(void);
+[v _PARO2out `(v ~T0 @X0 0 ef ]
+[p mainexit ]
+"7986 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC18F4550.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"4 ../Proyectoa4550.X/UART50.h
+[v _UARTconfi `(v ~T0 @X0 0 ef ]
+"4 ../Librerias.X\PWM4550.h
+[; ;../Librerias.X\PWM4550.h: 4: void PWMconfi(void);
+[v _PWMconfi `(v ~T0 @X0 0 ef ]
+"9 ./SETPOINTS.h
+[; ;./SETPOINTS.h: 9: void CHECK(void);
+[v _CHECK `(v ~T0 @X0 0 ef ]
+"4 ../Proyectoa4550.X/GPIO.h
+[v _inter_init `(v ~T0 @X0 0 ef ]
+"6 ../Proyectoa4550.X/UART50.h
+[v _UARTRead `(uc ~T0 @X0 0 ef ]
+"11 ./SETPOINTS.h
+[; ;./SETPOINTS.h: 11: uint16_t ExtraerDato(uint8_t Dir);
+[v _ExtraerDato `(us ~T0 @X0 0 ef1`uc ]
+"5 ../Proyectoa4550.X/Mensajes50.h
+[v _Menimp `(v ~T0 @X0 0 ef ]
+"4
+[v _Obt `(us ~T0 @X0 0 ef1`uc ]
+"22
+[v _OCUPADO `(v ~T0 @X0 0 ef ]
+"9
+[v _Mensaje_comando_completado `(v ~T0 @X0 0 ef ]
+"21
+[v _NOcoordenada `(v ~T0 @X0 0 ef ]
+"24
+[v _Tardanza `(v ~T0 @X0 0 ef ]
+"5 ../Proyectoa4550.X/MOTOR.h
+[v _Accion `(v ~T0 @X0 0 ef ]
+"6 ../Proyectoa4550.X/Mensajes50.h
+[v _imprimirSet `(v ~T0 @X0 0 ef ]
+"10 ./SETPOINTS.h
+[; ;./SETPOINTS.h: 10: uint16_t MOVASETPOINT(uint16_t XR, uint16_t YR);
+[v _MOVASETPOINT `(us ~T0 @X0 0 ef2`us`us ]
+"8
+[; ;./SETPOINTS.h: 8: void EditseT(void);
+[v _EditseT `(v ~T0 @X0 0 ef ]
+"16
+[; ;./SETPOINTS.h: 16: void CREARINS(void);
+[v _CREARINS `(v ~T0 @X0 0 ef ]
+"15 ../Proyectoa4550.X/Mensajes50.h
+[v _imprimirINS `(v ~T0 @X0 0 ef ]
+"17 ./SETPOINTS.h
+[; ;./SETPOINTS.h: 17: uint8_t PREEJECUTAR(uint16_t XR, uint16_t YR);
+[v _PREEJECUTAR `(uc ~T0 @X0 0 ef2`us`us ]
+"23 ../Proyectoa4550.X/Mensajes50.h
+[v _COORReal `(v ~T0 @X0 0 ef2`us`us ]
+"20
+[v _NOcomando `(v ~T0 @X0 0 ef ]
+"5 ./SETPOINTS.h
+[; ;./SETPOINTS.h: 5: void GuardarsetX(uint8_t dir, uint16_t X);
+[v _GuardarsetX `(v ~T0 @X0 0 ef2`uc`us ]
+"6
+[; ;./SETPOINTS.h: 6: void GuardarsetY(uint8_t dir, uint16_t Y);
+[v _GuardarsetY `(v ~T0 @X0 0 ef2`uc`us ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC18F4550.h
+[; <" SPPDATA equ 0F62h ;# ">
+"74
+[; <" SPPCFG equ 0F63h ;# ">
+"151
+[; <" SPPEPS equ 0F64h ;# ">
+"225
+[; <" SPPCON equ 0F65h ;# ">
+"251
+[; <" UFRM equ 0F66h ;# ">
+"258
+[; <" UFRML equ 0F66h ;# ">
+"336
+[; <" UFRMH equ 0F67h ;# ">
+"376
+[; <" UIR equ 0F68h ;# ">
+"432
+[; <" UIE equ 0F69h ;# ">
+"488
+[; <" UEIR equ 0F6Ah ;# ">
+"539
+[; <" UEIE equ 0F6Bh ;# ">
+"590
+[; <" USTAT equ 0F6Ch ;# ">
+"650
+[; <" UCON equ 0F6Dh ;# ">
+"701
+[; <" UADDR equ 0F6Eh ;# ">
+"765
+[; <" UCFG equ 0F6Fh ;# ">
+"844
+[; <" UEP0 equ 0F70h ;# ">
+"952
+[; <" UEP1 equ 0F71h ;# ">
+"1060
+[; <" UEP2 equ 0F72h ;# ">
+"1168
+[; <" UEP3 equ 0F73h ;# ">
+"1276
+[; <" UEP4 equ 0F74h ;# ">
+"1384
+[; <" UEP5 equ 0F75h ;# ">
+"1492
+[; <" UEP6 equ 0F76h ;# ">
+"1600
+[; <" UEP7 equ 0F77h ;# ">
+"1708
+[; <" UEP8 equ 0F78h ;# ">
+"1784
+[; <" UEP9 equ 0F79h ;# ">
+"1860
+[; <" UEP10 equ 0F7Ah ;# ">
+"1936
+[; <" UEP11 equ 0F7Bh ;# ">
+"2012
+[; <" UEP12 equ 0F7Ch ;# ">
+"2088
+[; <" UEP13 equ 0F7Dh ;# ">
+"2164
+[; <" UEP14 equ 0F7Eh ;# ">
+"2240
+[; <" UEP15 equ 0F7Fh ;# ">
+"2316
+[; <" PORTA equ 0F80h ;# ">
+"2455
+[; <" PORTB equ 0F81h ;# ">
+"2565
+[; <" PORTC equ 0F82h ;# ">
+"2707
+[; <" PORTD equ 0F83h ;# ">
+"2828
+[; <" PORTE equ 0F84h ;# ">
+"2975
+[; <" LATA equ 0F89h ;# ">
+"3075
+[; <" LATB equ 0F8Ah ;# ">
+"3187
+[; <" LATC equ 0F8Bh ;# ">
+"3265
+[; <" LATD equ 0F8Ch ;# ">
+"3377
+[; <" LATE equ 0F8Dh ;# ">
+"3429
+[; <" TRISA equ 0F92h ;# ">
+"3434
+[; <" DDRA equ 0F92h ;# ">
+"3627
+[; <" TRISB equ 0F93h ;# ">
+"3632
+[; <" DDRB equ 0F93h ;# ">
+"3849
+[; <" TRISC equ 0F94h ;# ">
+"3854
+[; <" DDRC equ 0F94h ;# ">
+"4003
+[; <" TRISD equ 0F95h ;# ">
+"4008
+[; <" DDRD equ 0F95h ;# ">
+"4225
+[; <" TRISE equ 0F96h ;# ">
+"4230
+[; <" DDRE equ 0F96h ;# ">
+"4327
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"4386
+[; <" PIE1 equ 0F9Dh ;# ">
+"4470
+[; <" PIR1 equ 0F9Eh ;# ">
+"4554
+[; <" IPR1 equ 0F9Fh ;# ">
+"4638
+[; <" PIE2 equ 0FA0h ;# ">
+"4709
+[; <" PIR2 equ 0FA1h ;# ">
+"4780
+[; <" IPR2 equ 0FA2h ;# ">
+"4851
+[; <" EECON1 equ 0FA6h ;# ">
+"4917
+[; <" EECON2 equ 0FA7h ;# ">
+"4924
+[; <" EEDATA equ 0FA8h ;# ">
+"4931
+[; <" EEADR equ 0FA9h ;# ">
+"4938
+[; <" RCSTA equ 0FABh ;# ">
+"4943
+[; <" RCSTA1 equ 0FABh ;# ">
+"5148
+[; <" TXSTA equ 0FACh ;# ">
+"5153
+[; <" TXSTA1 equ 0FACh ;# ">
+"5404
+[; <" TXREG equ 0FADh ;# ">
+"5409
+[; <" TXREG1 equ 0FADh ;# ">
+"5416
+[; <" RCREG equ 0FAEh ;# ">
+"5421
+[; <" RCREG1 equ 0FAEh ;# ">
+"5428
+[; <" SPBRG equ 0FAFh ;# ">
+"5433
+[; <" SPBRG1 equ 0FAFh ;# ">
+"5440
+[; <" SPBRGH equ 0FB0h ;# ">
+"5447
+[; <" T3CON equ 0FB1h ;# ">
+"5568
+[; <" TMR3 equ 0FB2h ;# ">
+"5575
+[; <" TMR3L equ 0FB2h ;# ">
+"5582
+[; <" TMR3H equ 0FB3h ;# ">
+"5589
+[; <" CMCON equ 0FB4h ;# ">
+"5679
+[; <" CVRCON equ 0FB5h ;# ">
+"5764
+[; <" ECCP1AS equ 0FB6h ;# ">
+"5769
+[; <" CCP1AS equ 0FB6h ;# ">
+"5926
+[; <" ECCP1DEL equ 0FB7h ;# ">
+"5931
+[; <" CCP1DEL equ 0FB7h ;# ">
+"6064
+[; <" BAUDCON equ 0FB8h ;# ">
+"6069
+[; <" BAUDCTL equ 0FB8h ;# ">
+"6244
+[; <" CCP2CON equ 0FBAh ;# ">
+"6308
+[; <" CCPR2 equ 0FBBh ;# ">
+"6315
+[; <" CCPR2L equ 0FBBh ;# ">
+"6322
+[; <" CCPR2H equ 0FBCh ;# ">
+"6329
+[; <" CCP1CON equ 0FBDh ;# ">
+"6334
+[; <" ECCP1CON equ 0FBDh ;# ">
+"6491
+[; <" CCPR1 equ 0FBEh ;# ">
+"6498
+[; <" CCPR1L equ 0FBEh ;# ">
+"6505
+[; <" CCPR1H equ 0FBFh ;# ">
+"6512
+[; <" ADCON2 equ 0FC0h ;# ">
+"6583
+[; <" ADCON1 equ 0FC1h ;# ">
+"6668
+[; <" ADCON0 equ 0FC2h ;# ">
+"6787
+[; <" ADRES equ 0FC3h ;# ">
+"6794
+[; <" ADRESL equ 0FC3h ;# ">
+"6801
+[; <" ADRESH equ 0FC4h ;# ">
+"6808
+[; <" SSPCON2 equ 0FC5h ;# ">
+"6870
+[; <" SSPCON1 equ 0FC6h ;# ">
+"6940
+[; <" SSPSTAT equ 0FC7h ;# ">
+"7188
+[; <" SSPADD equ 0FC8h ;# ">
+"7195
+[; <" SSPBUF equ 0FC9h ;# ">
+"7202
+[; <" T2CON equ 0FCAh ;# ">
+"7300
+[; <" PR2 equ 0FCBh ;# ">
+"7305
+[; <" MEMCON equ 0FCBh ;# ">
+"7410
+[; <" TMR2 equ 0FCCh ;# ">
+"7417
+[; <" T1CON equ 0FCDh ;# ">
+"7520
+[; <" TMR1 equ 0FCEh ;# ">
+"7527
+[; <" TMR1L equ 0FCEh ;# ">
+"7534
+[; <" TMR1H equ 0FCFh ;# ">
+"7541
+[; <" RCON equ 0FD0h ;# ">
+"7690
+[; <" WDTCON equ 0FD1h ;# ">
+"7718
+[; <" HLVDCON equ 0FD2h ;# ">
+"7723
+[; <" LVDCON equ 0FD2h ;# ">
+"7988
+[; <" OSCCON equ 0FD3h ;# ">
+"8071
+[; <" T0CON equ 0FD5h ;# ">
+"8141
+[; <" TMR0 equ 0FD6h ;# ">
+"8148
+[; <" TMR0L equ 0FD6h ;# ">
+"8155
+[; <" TMR0H equ 0FD7h ;# ">
+"8162
+[; <" STATUS equ 0FD8h ;# ">
+"8233
+[; <" FSR2 equ 0FD9h ;# ">
+"8240
+[; <" FSR2L equ 0FD9h ;# ">
+"8247
+[; <" FSR2H equ 0FDAh ;# ">
+"8254
+[; <" PLUSW2 equ 0FDBh ;# ">
+"8261
+[; <" PREINC2 equ 0FDCh ;# ">
+"8268
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"8275
+[; <" POSTINC2 equ 0FDEh ;# ">
+"8282
+[; <" INDF2 equ 0FDFh ;# ">
+"8289
+[; <" BSR equ 0FE0h ;# ">
+"8296
+[; <" FSR1 equ 0FE1h ;# ">
+"8303
+[; <" FSR1L equ 0FE1h ;# ">
+"8310
+[; <" FSR1H equ 0FE2h ;# ">
+"8317
+[; <" PLUSW1 equ 0FE3h ;# ">
+"8324
+[; <" PREINC1 equ 0FE4h ;# ">
+"8331
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"8338
+[; <" POSTINC1 equ 0FE6h ;# ">
+"8345
+[; <" INDF1 equ 0FE7h ;# ">
+"8352
+[; <" WREG equ 0FE8h ;# ">
+"8359
+[; <" FSR0 equ 0FE9h ;# ">
+"8366
+[; <" FSR0L equ 0FE9h ;# ">
+"8373
+[; <" FSR0H equ 0FEAh ;# ">
+"8380
+[; <" PLUSW0 equ 0FEBh ;# ">
+"8387
+[; <" PREINC0 equ 0FECh ;# ">
+"8394
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"8401
+[; <" POSTINC0 equ 0FEEh ;# ">
+"8408
+[; <" INDF0 equ 0FEFh ;# ">
+"8415
+[; <" INTCON3 equ 0FF0h ;# ">
+"8507
+[; <" INTCON2 equ 0FF1h ;# ">
+"8584
+[; <" INTCON equ 0FF2h ;# ">
+"8701
+[; <" PROD equ 0FF3h ;# ">
+"8708
+[; <" PRODL equ 0FF3h ;# ">
+"8715
+[; <" PRODH equ 0FF4h ;# ">
+"8722
+[; <" TABLAT equ 0FF5h ;# ">
+"8731
+[; <" TBLPTR equ 0FF6h ;# ">
+"8738
+[; <" TBLPTRL equ 0FF6h ;# ">
+"8745
+[; <" TBLPTRH equ 0FF7h ;# ">
+"8752
+[; <" TBLPTRU equ 0FF8h ;# ">
+"8761
+[; <" PCLAT equ 0FF9h ;# ">
+"8768
+[; <" PC equ 0FF9h ;# ">
+"8775
+[; <" PCL equ 0FF9h ;# ">
+"8782
+[; <" PCLATH equ 0FFAh ;# ">
+"8789
+[; <" PCLATU equ 0FFBh ;# ">
+"8796
+[; <" STKPTR equ 0FFCh ;# ">
+"8872
+[; <" TOS equ 0FFDh ;# ">
+"8879
+[; <" TOSL equ 0FFDh ;# ">
+"8886
+[; <" TOSH equ 0FFEh ;# ">
+"8893
+[; <" TOSU equ 0FFFh ;# ">
+"8 ../Librerias.X\PWM4550.h
+[; ;../Librerias.X\PWM4550.h: 8: uint8_t *PA;
+[v _PA `*uc ~T0 @X0 1 e ]
+"9
+[; ;../Librerias.X\PWM4550.h: 9: uint8_t *PB;
+[v _PB `*uc ~T0 @X0 1 e ]
+"8 ../Proyectoa4550.X/MOTOR.h
+[v _banderaaccion `uc ~T0 @X0 1 e ]
+"32 SPARC.c
+[; ;SPARC.c: 32: uint8_t Acci=0;
+[v _Acci `uc ~T0 @X0 1 e ]
+[i _Acci
+-> -> 0 `i `uc
+]
+"33
+[; ;SPARC.c: 33: uint8_t E=0;
+[v _E `uc ~T0 @X0 1 e ]
+[i _E
+-> -> 0 `i `uc
+]
+"34
+[; ;SPARC.c: 34: uint16_t XvalorR=0;
+[v _XvalorR `us ~T0 @X0 1 e ]
+[i _XvalorR
+-> -> 0 `i `us
+]
+"35
+[; ;SPARC.c: 35: uint16_t YvalorR=0;
+[v _YvalorR `us ~T0 @X0 1 e ]
+[i _YvalorR
+-> -> 0 `i `us
+]
+"36
+[; ;SPARC.c: 36: uint16_t Xvalorn=0;
+[v _Xvalorn `us ~T0 @X0 1 e ]
+[i _Xvalorn
+-> -> 0 `i `us
+]
+"37
+[; ;SPARC.c: 37: uint16_t Yvalorn=0;
+[v _Yvalorn `us ~T0 @X0 1 e ]
+[i _Yvalorn
+-> -> 0 `i `us
+]
+"38
+[; ;SPARC.c: 38: int16_t DifX=0;
+[v _DifX `s ~T0 @X0 1 e ]
+[i _DifX
+-> -> 0 `i `s
+]
+"39
+[; ;SPARC.c: 39: int16_t DifY=0;
+[v _DifY `s ~T0 @X0 1 e ]
+[i _DifY
+-> -> 0 `i `s
+]
+"40
+[; ;SPARC.c: 40: uint8_t DirEEPROM=0;
+[v _DirEEPROM `uc ~T0 @X0 1 e ]
+[i _DirEEPROM
+-> -> 0 `i `uc
+]
+"41
+[; ;SPARC.c: 41: uint16_t *PX=&XvalorR;
+[v _PX `*us ~T0 @X0 1 e ]
+[i _PX
+&U _XvalorR
+]
+"42
+[; ;SPARC.c: 42: uint16_t *PY=&YvalorR;
+[v _PY `*us ~T0 @X0 1 e ]
+[i _PY
+&U _YvalorR
+]
+"43
+[; ;SPARC.c: 43: uint16_t *PXN=&Xvalorn;
+[v _PXN `*us ~T0 @X0 1 e ]
+[i _PXN
+&U _Xvalorn
+]
+"44
+[; ;SPARC.c: 44: uint16_t *PYN=&Yvalorn;
+[v _PYN `*us ~T0 @X0 1 e ]
+[i _PYN
+&U _Yvalorn
+]
+[v $root$_INT_isr `(v ~T0 @X0 0 e ]
+"46
+[; ;SPARC.c: 46: void __attribute__((picinterrupt(("")))) INT_isr(void) {
+[v _INT_isr `(v ~T36 @X0 1 ef ]
+{
+[e :U _INT_isr ]
+[f ]
+"47
+[; ;SPARC.c: 47:     _delay((unsigned long)((10)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"48
+[; ;SPARC.c: 48:     if(INTCON3bits.INT1IF==1&&PORTBbits.RB1==1) {
+[e $ ! && == -> . . _INTCON3bits 0 0 `i -> 1 `i == -> . . _PORTBbits 0 1 `i -> 1 `i 370  ]
+{
+"49
+[; ;SPARC.c: 49:         interrupcionX();
+[e ( _interrupcionX ..  ]
+"50
+[; ;SPARC.c: 50:         motoresmov(5,0);
+[e ( _motoresmov (2 , -> -> 5 `i `s -> -> 0 `i `s ]
+"51
+[; ;SPARC.c: 51:         *PX=0;
+[e = *U _PX -> -> 0 `i `us ]
+"52
+[; ;SPARC.c: 52:         *PXN=0;
+[e = *U _PXN -> -> 0 `i `us ]
+"53
+[; ;SPARC.c: 53:         INTCON3bits.INT1IF=0;
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+"54
+[; ;SPARC.c: 54:     } else if(INTCONbits.INT0IF==1&&PORTBbits.RB0==1) {
+}
+[e $U 371  ]
+[e :U 370 ]
+[e $ ! && == -> . . _INTCONbits 0 1 `i -> 1 `i == -> . . _PORTBbits 0 0 `i -> 1 `i 372  ]
+{
+"55
+[; ;SPARC.c: 55:         interrupcionY();
+[e ( _interrupcionY ..  ]
+"56
+[; ;SPARC.c: 56:         motoresmov(0,5);
+[e ( _motoresmov (2 , -> -> 0 `i `s -> -> 5 `i `s ]
+"57
+[; ;SPARC.c: 57:         *PY=0;
+[e = *U _PY -> -> 0 `i `us ]
+"58
+[; ;SPARC.c: 58:         *PYN=0;
+[e = *U _PYN -> -> 0 `i `us ]
+"59
+[; ;SPARC.c: 59:         INTCONbits.INT0IF=0;
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+"61
+[; ;SPARC.c: 61:     }else if(INTCON3bits.INT2IF==1&&PORTBbits.RB2==1) {
+}
+[e $U 373  ]
+[e :U 372 ]
+[e $ ! && == -> . . _INTCON3bits 0 1 `i -> 1 `i == -> . . _PORTBbits 0 2 `i -> 1 `i 374  ]
+{
+"62
+[; ;SPARC.c: 62:         PARO2aden();
+[e ( _PARO2aden ..  ]
+"63
+[; ;SPARC.c: 63:         while(PORTBbits.RB2==1);
+[e $U 375  ]
+[e :U 376 ]
+[e :U 375 ]
+[e $ == -> . . _PORTBbits 0 2 `i -> 1 `i 376  ]
+[e :U 377 ]
+"64
+[; ;SPARC.c: 64:         PARO2out();
+[e ( _PARO2out ..  ]
+"65
+[; ;SPARC.c: 65:         INTCON3bits.INT2IF=0;
+[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
+"67
+[; ;SPARC.c: 67:     }
+}
+[e :U 374 ]
+[e :U 373 ]
+[e :U 371 ]
+"68
+[; ;SPARC.c: 68:     INTCON3bits.INT1IF=0;
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+"69
+[; ;SPARC.c: 69:     INTCONbits.INT0IF=0;
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+"70
+[; ;SPARC.c: 70:     INTCONbits.INT0IF=0;
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+"71
+[; ;SPARC.c: 71: }
+[e :UE 369 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"73
+[; ;SPARC.c: 73: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"74
+[; ;SPARC.c: 74:     OSCCON = 0x60;
+[e = _OSCCON -> -> 96 `i `uc ]
+"75
+[; ;SPARC.c: 75:     UARTconfi();
+[e ( _UARTconfi ..  ]
+"76
+[; ;SPARC.c: 76:     PWMconfi();
+[e ( _PWMconfi ..  ]
+"77
+[; ;SPARC.c: 77:     CHECK();
+[e ( _CHECK ..  ]
+"78
+[; ;SPARC.c: 78:     inter_init();
+[e ( _inter_init ..  ]
+"79
+[; ;SPARC.c: 79:     Acci=UARTRead();
+[e = _Acci ( _UARTRead ..  ]
+"80
+[; ;SPARC.c: 80:     Acci=0;
+[e = _Acci -> -> 0 `i `uc ]
+"81
+[; ;SPARC.c: 81:     XvalorR=ExtraerDato(252);
+[e = _XvalorR ( _ExtraerDato (1 -> -> 252 `i `uc ]
+"82
+[; ;SPARC.c: 82:     YvalorR=ExtraerDato(254);
+[e = _YvalorR ( _ExtraerDato (1 -> -> 254 `i `uc ]
+"83
+[; ;SPARC.c: 83:     if(PORTBbits.RB1==0) {
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 379  ]
+{
+"84
+[; ;SPARC.c: 84:         motoresmov(-1000, 0);
+[e ( _motoresmov (2 , -> -U -> 1000 `i `s -> -> 0 `i `s ]
+"85
+[; ;SPARC.c: 85:     } else {
+}
+[e $U 380  ]
+[e :U 379 ]
+{
+"86
+[; ;SPARC.c: 86:         motoresmov(5, 0);
+[e ( _motoresmov (2 , -> -> 5 `i `s -> -> 0 `i `s ]
+"87
+[; ;SPARC.c: 87:     }
+}
+[e :U 380 ]
+"88
+[; ;SPARC.c: 88:      if(PORTBbits.RB0==0) {
+[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 381  ]
+{
+"89
+[; ;SPARC.c: 89:         motoresmov(0, -1000);
+[e ( _motoresmov (2 , -> -> 0 `i `s -> -U -> 1000 `i `s ]
+"90
+[; ;SPARC.c: 90:     } else {
+}
+[e $U 382  ]
+[e :U 381 ]
+{
+"91
+[; ;SPARC.c: 91:          motoresmov(0, 5);
+[e ( _motoresmov (2 , -> -> 0 `i `s -> -> 5 `i `s ]
+"92
+[; ;SPARC.c: 92:     }
+}
+[e :U 382 ]
+"95
+[; ;SPARC.c: 95:     while(1) {
+[e :U 384 ]
+{
+"96
+[; ;SPARC.c: 96:         E=0;
+[e = _E -> -> 0 `i `uc ]
+"97
+[; ;SPARC.c: 97:         Menimp();
+[e ( _Menimp ..  ]
+"98
+[; ;SPARC.c: 98:         Acci=UARTRead();
+[e = _Acci ( _UARTRead ..  ]
+"99
+[; ;SPARC.c: 99:         if(Acci=='M'||Acci=='m') {
+[e $ ! || == -> _Acci `ui -> 77 `ui == -> _Acci `ui -> 109 `ui 386  ]
+{
+"100
+[; ;SPARC.c: 100:             Xvalorn=Obt('X');
+[e = _Xvalorn ( _Obt (1 -> -> 88 `ui `uc ]
+"101
+[; ;SPARC.c: 101:             if(Xvalorn>300) {
+[e $ ! > -> _Xvalorn `ui -> -> 300 `i `ui 387  ]
+{
+"102
+[; ;SPARC.c: 102:                 E=1;
+[e = _E -> -> 1 `i `uc ]
+"103
+[; ;SPARC.c: 103:             }
+}
+[e :U 387 ]
+"104
+[; ;SPARC.c: 104:             if(E==0){
+[e $ ! == -> _E `i -> 0 `i 388  ]
+{
+"105
+[; ;SPARC.c: 105:                 Yvalorn=Obt('Y');
+[e = _Yvalorn ( _Obt (1 -> -> 89 `ui `uc ]
+"106
+[; ;SPARC.c: 106:             }
+}
+[e :U 388 ]
+"107
+[; ;SPARC.c: 107:             if(Yvalorn>300) {
+[e $ ! > -> _Yvalorn `ui -> -> 300 `i `ui 389  ]
+{
+"108
+[; ;SPARC.c: 108:                 E=1;
+[e = _E -> -> 1 `i `uc ]
+"109
+[; ;SPARC.c: 109:             }
+}
+[e :U 389 ]
+"110
+[; ;SPARC.c: 110:             if(Xvalorn==30000||Yvalorn==30000) {
+[e $ ! || == -> _Xvalorn `ui -> -> 30000 `i `ui == -> _Yvalorn `ui -> -> 30000 `i `ui 390  ]
+{
+"111
+[; ;SPARC.c: 111:                 E=2;
+[e = _E -> -> 2 `i `uc ]
+"112
+[; ;SPARC.c: 112:             }
+}
+[e :U 390 ]
+"113
+[; ;SPARC.c: 113:             if(E==0) {
+[e $ ! == -> _E `i -> 0 `i 391  ]
+{
+"114
+[; ;SPARC.c: 114:                 DifX=Xvalorn-XvalorR;
+[e = _DifX -> - -> _Xvalorn `ui -> _XvalorR `ui `s ]
+"115
+[; ;SPARC.c: 115:                 DifY=Yvalorn-YvalorR;
+[e = _DifY -> - -> _Yvalorn `ui -> _YvalorR `ui `s ]
+"116
+[; ;SPARC.c: 116:                 OCUPADO();
+[e ( _OCUPADO ..  ]
+"117
+[; ;SPARC.c: 117:                 motoresmov(DifX, DifY);
+[e ( _motoresmov (2 , _DifX _DifY ]
+"118
+[; ;SPARC.c: 118:                 Mensaje_comando_completado();
+[e ( _Mensaje_comando_completado ..  ]
+"119
+[; ;SPARC.c: 119:                 XvalorR=Xvalorn;
+[e = _XvalorR _Xvalorn ]
+"120
+[; ;SPARC.c: 120:                 YvalorR=Yvalorn;
+[e = _YvalorR _Yvalorn ]
+"121
+[; ;SPARC.c: 121:             } else if(E==1) {
+}
+[e $U 392  ]
+[e :U 391 ]
+[e $ ! == -> _E `i -> 1 `i 393  ]
+{
+"122
+[; ;SPARC.c: 122:                 NOcoordenada();
+[e ( _NOcoordenada ..  ]
+"123
+[; ;SPARC.c: 123:             } else {
+}
+[e $U 394  ]
+[e :U 393 ]
+{
+"124
+[; ;SPARC.c: 124:                 Tardanza();
+[e ( _Tardanza ..  ]
+"125
+[; ;SPARC.c: 125:             }
+}
+[e :U 394 ]
+[e :U 392 ]
+"126
+[; ;SPARC.c: 126:             Acci=0;
+[e = _Acci -> -> 0 `i `uc ]
+"127
+[; ;SPARC.c: 127:         }else if(Acci=='A'||Acci=='a') {
+}
+[e $U 395  ]
+[e :U 386 ]
+[e $ ! || == -> _Acci `ui -> 65 `ui == -> _Acci `ui -> 97 `ui 396  ]
+{
+"128
+[; ;SPARC.c: 128:             OCUPADO();
+[e ( _OCUPADO ..  ]
+"129
+[; ;SPARC.c: 129:             Accion();
+[e ( _Accion ..  ]
+"130
+[; ;SPARC.c: 130:             Mensaje_comando_completado();
+[e ( _Mensaje_comando_completado ..  ]
+"131
+[; ;SPARC.c: 131:             Acci=0;
+[e = _Acci -> -> 0 `i `uc ]
+"132
+[; ;SPARC.c: 132:         }else if(Acci=='S'||Acci=='s') {
+}
+[e $U 397  ]
+[e :U 396 ]
+[e $ ! || == -> _Acci `ui -> 83 `ui == -> _Acci `ui -> 115 `ui 398  ]
+{
+"133
+[; ;SPARC.c: 133:             OCUPADO();
+[e ( _OCUPADO ..  ]
+"134
+[; ;SPARC.c: 134:             imprimirSet();
+[e ( _imprimirSet ..  ]
+"135
+[; ;SPARC.c: 135:             DirEEPROM=MOVASETPOINT(XvalorR, YvalorR);
+[e = _DirEEPROM -> ( _MOVASETPOINT (2 , _XvalorR _YvalorR `uc ]
+"136
+[; ;SPARC.c: 136:             if(DirEEPROM<160){
+[e $ ! < -> _DirEEPROM `i -> 160 `i 399  ]
+{
+"137
+[; ;SPARC.c: 137:                 XvalorR=ExtraerDato(DirEEPROM+4);
+[e = _XvalorR ( _ExtraerDato (1 -> + -> _DirEEPROM `i -> 4 `i `uc ]
+"138
+[; ;SPARC.c: 138:                 YvalorR=ExtraerDato(DirEEPROM+6);
+[e = _YvalorR ( _ExtraerDato (1 -> + -> _DirEEPROM `i -> 6 `i `uc ]
+"139
+[; ;SPARC.c: 139:             }
+}
+[e :U 399 ]
+"140
+[; ;SPARC.c: 140:             Mensaje_comando_completado();
+[e ( _Mensaje_comando_completado ..  ]
+"141
+[; ;SPARC.c: 141:             Acci=0;
+[e = _Acci -> -> 0 `i `uc ]
+"143
+[; ;SPARC.c: 143:         } else if(Acci=='E'||Acci=='e') {
+}
+[e $U 400  ]
+[e :U 398 ]
+[e $ ! || == -> _Acci `ui -> 69 `ui == -> _Acci `ui -> 101 `ui 401  ]
+{
+"144
+[; ;SPARC.c: 144:             imprimirSet();
+[e ( _imprimirSet ..  ]
+"145
+[; ;SPARC.c: 145:             EditseT();
+[e ( _EditseT ..  ]
+"146
+[; ;SPARC.c: 146:             Mensaje_comando_completado();
+[e ( _Mensaje_comando_completado ..  ]
+"147
+[; ;SPARC.c: 147:             Acci=0;
+[e = _Acci -> -> 0 `i `uc ]
+"149
+[; ;SPARC.c: 149:         } else if(Acci=='C'||Acci=='c') {
+}
+[e $U 402  ]
+[e :U 401 ]
+[e $ ! || == -> _Acci `ui -> 67 `ui == -> _Acci `ui -> 99 `ui 403  ]
+{
+"150
+[; ;SPARC.c: 150:             CREARINS();
+[e ( _CREARINS ..  ]
+"151
+[; ;SPARC.c: 151:             Mensaje_comando_completado();
+[e ( _Mensaje_comando_completado ..  ]
+"152
+[; ;SPARC.c: 152:             Acci=0;
+[e = _Acci -> -> 0 `i `uc ]
+"153
+[; ;SPARC.c: 153:         } else if(Acci=='F'||Acci=='f') {
+}
+[e $U 404  ]
+[e :U 403 ]
+[e $ ! || == -> _Acci `ui -> 70 `ui == -> _Acci `ui -> 102 `ui 405  ]
+{
+"154
+[; ;SPARC.c: 154:             OCUPADO();
+[e ( _OCUPADO ..  ]
+"155
+[; ;SPARC.c: 155:             imprimirINS();
+[e ( _imprimirINS ..  ]
+"156
+[; ;SPARC.c: 156:             DirEEPROM=PREEJECUTAR(XvalorR, YvalorR);
+[e = _DirEEPROM ( _PREEJECUTAR (2 , _XvalorR _YvalorR ]
+"157
+[; ;SPARC.c: 157:             if(DirEEPROM<160){
+[e $ ! < -> _DirEEPROM `i -> 160 `i 406  ]
+{
+"158
+[; ;SPARC.c: 158:                 XvalorR=ExtraerDato(DirEEPROM+4);
+[e = _XvalorR ( _ExtraerDato (1 -> + -> _DirEEPROM `i -> 4 `i `uc ]
+"159
+[; ;SPARC.c: 159:                 YvalorR=ExtraerDato(DirEEPROM+6);
+[e = _YvalorR ( _ExtraerDato (1 -> + -> _DirEEPROM `i -> 6 `i `uc ]
+"160
+[; ;SPARC.c: 160:             }
+}
+[e :U 406 ]
+"161
+[; ;SPARC.c: 161:             Acci=0;
+[e = _Acci -> -> 0 `i `uc ]
+"162
+[; ;SPARC.c: 162:         } else if(Acci=='L'||Acci=='l') {
+}
+[e $U 407  ]
+[e :U 405 ]
+[e $ ! || == -> _Acci `ui -> 76 `ui == -> _Acci `ui -> 108 `ui 408  ]
+{
+"163
+[; ;SPARC.c: 163:             imprimirSet();
+[e ( _imprimirSet ..  ]
+"164
+[; ;SPARC.c: 164:             Acci=0;
+[e = _Acci -> -> 0 `i `uc ]
+"165
+[; ;SPARC.c: 165:         } else if(Acci=='N'||Acci=='n') {
+}
+[e $U 409  ]
+[e :U 408 ]
+[e $ ! || == -> _Acci `ui -> 78 `ui == -> _Acci `ui -> 110 `ui 410  ]
+{
+"166
+[; ;SPARC.c: 166:             imprimirINS();
+[e ( _imprimirINS ..  ]
+"167
+[; ;SPARC.c: 167:             Acci=0;
+[e = _Acci -> -> 0 `i `uc ]
+"168
+[; ;SPARC.c: 168:         } else if(Acci=='T'||Acci=='t') {
+}
+[e $U 411  ]
+[e :U 410 ]
+[e $ ! || == -> _Acci `ui -> 84 `ui == -> _Acci `ui -> 116 `ui 412  ]
+{
+"169
+[; ;SPARC.c: 169:             COORReal (XvalorR, YvalorR);
+[e ( _COORReal (2 , _XvalorR _YvalorR ]
+"170
+[; ;SPARC.c: 170:         }else if(Acci=='R'||Acci=='r') {
+}
+[e $U 413  ]
+[e :U 412 ]
+[e $ ! || == -> _Acci `ui -> 82 `ui == -> _Acci `ui -> 114 `ui 414  ]
+{
+"171
+[; ;SPARC.c: 171:             OCUPADO();
+[e ( _OCUPADO ..  ]
+"172
+[; ;SPARC.c: 172:             if(PORTBbits.RB1==0) {
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 415  ]
+{
+"173
+[; ;SPARC.c: 173:                 motoresmov(-1000, 0);
+[e ( _motoresmov (2 , -> -U -> 1000 `i `s -> -> 0 `i `s ]
+"174
+[; ;SPARC.c: 174:             }
+}
+[e :U 415 ]
+"175
+[; ;SPARC.c: 175:              if(PORTBbits.RB0==0) {
+[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 416  ]
+{
+"176
+[; ;SPARC.c: 176:                 motoresmov(0, -1000);
+[e ( _motoresmov (2 , -> -> 0 `i `s -> -U -> 1000 `i `s ]
+"177
+[; ;SPARC.c: 177:             }
+}
+[e :U 416 ]
+"178
+[; ;SPARC.c: 178:             Mensaje_comando_completado();
+[e ( _Mensaje_comando_completado ..  ]
+"179
+[; ;SPARC.c: 179:         }else if(Acci==((void*)0)){
+}
+[e $U 417  ]
+[e :U 414 ]
+[e $ ! == -> -> _Acci `i `*v -> -> 0 `i `*v 418  ]
+{
+"180
+[; ;SPARC.c: 180:             Tardanza();
+[e ( _Tardanza ..  ]
+"181
+[; ;SPARC.c: 181:         }else {
+}
+[e $U 419  ]
+[e :U 418 ]
+{
+"182
+[; ;SPARC.c: 182:             NOcomando();
+[e ( _NOcomando ..  ]
+"183
+[; ;SPARC.c: 183:         }
+}
+[e :U 419 ]
+[e :U 417 ]
+[e :U 413 ]
+[e :U 411 ]
+[e :U 409 ]
+[e :U 407 ]
+[e :U 404 ]
+[e :U 402 ]
+[e :U 400 ]
+[e :U 397 ]
+[e :U 395 ]
+"184
+[; ;SPARC.c: 184:         Xvalorn=0;
+[e = _Xvalorn -> -> 0 `i `us ]
+"185
+[; ;SPARC.c: 185:         Yvalorn=0;
+[e = _Yvalorn -> -> 0 `i `us ]
+"186
+[; ;SPARC.c: 186:         GuardarsetX(252, XvalorR);
+[e ( _GuardarsetX (2 , -> -> 252 `i `uc _XvalorR ]
+"187
+[; ;SPARC.c: 187:         GuardarsetY(254, YvalorR);
+[e ( _GuardarsetY (2 , -> -> 254 `i `uc _YvalorR ]
+"188
+[; ;SPARC.c: 188:     }
+}
+[e :U 383 ]
+[e $U 384  ]
+[e :U 385 ]
+"189
+[; ;SPARC.c: 189:     return;
+[e $UE 378  ]
+"190
+[; ;SPARC.c: 190: }
+[e :UE 378 ]
+}
