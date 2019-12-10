@@ -13,113 +13,68 @@
 #include "Mensajes50.h"
 #include "EEPROM.h"
 #include "SETPOINTS.h"
+#include "DEFINES_4550_4MHZ.h"
 
 
 
 
 
-uint16_t ObtX(void) {
+uint16_t Obt(uint8_t imp) {
     uint8_t Xvalor[3];
     uint8_t Send;
+    uint8_t E=0;
     uint16_t valor=0;
-    UARTWrite('X');
-    UARTWrite('=');
+    UARTWrite(imp);
     Xvalor[0]=UARTRead();
-    Nop();
-    while(Xvalor[0]<48||Xvalor[0]>51) {
-        Xvalor[0]=UARTRead();
+    if(Xvalor[0]<='9'&&Xvalor[0]>='0') {
+        Send=Xvalor[0];
+        UARTWrite(Send);
+    } else {
+        E=1;
     }
-    Send=Xvalor[0];
-    UARTWrite(Send);
-    if(Xvalor[0]!='3') {
+    if(E!=1) {
         Xvalor[1]=UARTRead();
-        Nop();
-        while(Xvalor[1]<'0'||Xvalor[1]>'9') {
-            Xvalor[1]=UARTRead();
+        if(Xvalor[1]<='9'&&Xvalor[1]>='0') {
+            Send=Xvalor[1];
+            UARTWrite(Send);
+        } else {
+            E=1;
         }
-        Send=Xvalor[1];
-        UARTWrite(Send);
-    } else {
-        Xvalor[1]='0';
-        Send=Xvalor[1];
-        UARTWrite(Send);
     }
-    if(Xvalor[0]!='3') {
+    if(E!=1) {
         Xvalor[2]=UARTRead();
-        Nop();
-        while(Xvalor[2]<48||Xvalor[2]>57) {
-            Xvalor[2]=UARTRead();
-        }
-        Send=Xvalor[2];
-        UARTWrite(Send);
-    } else {
-        Xvalor[2]='0';
-        Send=Xvalor[2];
-        UARTWrite(Send);
+        if(Xvalor[2]<='9'&&Xvalor[2]>='0') {
+            Send=Xvalor[2];
+            UARTWrite(Send);
+        } else {
+            E=1;
+        } 
     }
-    valor=((Xvalor[0]-48)*100)+((Xvalor[1]-48)*10)+(Xvalor[2]-48);
+    if(E==1) {
+        valor=60000;
+    }else {
+        valor=((Xvalor[0]-48)*100)+((Xvalor[1]-48)*10)+(Xvalor[2]-48);
+    }
+    if(Xvalor[0]==NULL||Xvalor[1]==NULL||Xvalor[2]==NULL) {
+        valor=30000;
+    }
     return valor;
+    
 }
 
-uint16_t ObtY(void) {
-    uint8_t Xvalor[3];
-    uint8_t Send;
-    uint16_t valor=0;
-    UARTWrite('Y');
-    UARTWrite('=');
-    Xvalor[0]=UARTRead();
-    while(Xvalor[0]<48||Xvalor[0]>51) {
-        Xvalor[0]=UARTRead();
-    }
-    Send=Xvalor[0];
-    UARTWrite(Send);
-    if(Xvalor[0]!='3') {
-        Xvalor[1]=UARTRead();
-        while(Xvalor[1]<48||Xvalor[1]>57) {
-            Xvalor[0]=UARTRead();
-        }
-        Send=Xvalor[1];
-        UARTWrite(Send);
-    } else {
-        Xvalor[1]='0';
-        Send=Xvalor[1];
-        UARTWrite(Send);
-    }
-    if(Xvalor[0]!='3') {
-        Xvalor[2]=UARTRead();
-        while(Xvalor[2]<48||Xvalor[2]>57) {
-            Xvalor[2]=UARTRead();
-        }
-        Send=Xvalor[2];
-        UARTWrite(Send);
-    } else {
-        Xvalor[2]='0';
-        Send=Xvalor[2];
-        UARTWrite(Send);
-    }
-    valor=((Xvalor[0]-48)*100)+((Xvalor[1]-48)*10)+(Xvalor[2]-48);
-    return valor;
-}
 
-void Menimp (uint16_t Xvalora,uint16_t Yvalora) {
+
+void Menimp (void) {
+    RCREG1 = 0;
+    RegistroRX=0;
     uint8_t Send;
-    uint8_t Pos[]="X=000 Y=000\n\r";
-    Pos[2]=(Xvalora/100)+'0';
-    Pos[3]=(Xvalora % 100) / 10 + '0';
-    Pos[4]=(Xvalora % 100) % 10 + '0';
-    Pos[8]=(Yvalora/100)+'0';
-    Pos[9]=(Yvalora % 100) / 10 + '0';
-    Pos[10]=(Yvalora % 100) % 10 + '0';
-    for(uint8_t i=0; i<(sizeof(Pos)); i++) {
-                Send=Pos[i];
-                UARTWrite(Send);
-    }
-    uint8_t comandos[]="M=mov A=acci S=movaS E=editar C=crear instruccion F=Ejecutar\n\r"; 
+    uint8_t comandos[]="CL"; 
     for(uint8_t i=0; i<(sizeof(comandos)); i++) {
                 Send=comandos[i];
                 UARTWrite(Send);
     }
 }
+
 
 void imprimirSet(void) {
     uint8_t XH=0;
@@ -181,7 +136,9 @@ void SETPOINEXIST(void) {
 }
 
 void Mensaje_comando_completado(void) {
-    uint8_t F[]="Done\n\r";
+    RCREG1 = 0;
+    RegistroRX=0;
+    uint8_t F[]="R";
     for(uint8_t C=0; C<(sizeof(F)); C++) {
             UARTWrite(F[C]);
     }
@@ -220,10 +177,10 @@ void imprimirINS(void) {
     uint8_t suma=0;
     uint8_t DATA=5;
     
-    while(i<255&&DATA!=0) {
+    while(i<LIMITINS&&DATA!=0) {
         DATA=EEPROM_R(i);
                 
-        if(DATA!=20&&DATA<255) {
+        if(DATA!=20&&DATA<LIMITINS) {
            for(uint8_t R=0; R<=3; R++) {
                 suma=i+R;
                 UARTWrite(EEPROM_R(suma));
@@ -241,6 +198,67 @@ void imprimirINS(void) {
 
 void PREGUNTA2(void) {
     uint8_t F[]="Esta es la instruccion a ejecutar Estas seguro? 1Si 2No\n\r";
+    for(uint8_t C=0; C<(sizeof(F)); C++) {
+            UARTWrite(F[C]);
+    }
+}
+
+void LIMITEX(void) {
+    uint8_t F[]="LIMITE EN X\n\r";
+    for(uint8_t C=0; C<(sizeof(F)); C++) {
+            UARTWrite(F[C]);
+    }
+}
+
+void LIMITEY(void) {
+    uint8_t F[]="LIMITE EN Y\n\r";
+    for(uint8_t C=0; C<(sizeof(F)); C++) {
+            UARTWrite(F[C]);
+    }
+}
+void PARO2(void) {
+    uint8_t F[]="BOTON DE PARO PRESIONADO\n\r";
+    for(uint8_t C=0; C<(sizeof(F)); C++) {
+            UARTWrite(F[C]);
+    }
+}
+
+void NOcomando(void) {
+    uint8_t F[]="E0";
+    for(uint8_t C=0; C<(sizeof(F)); C++) {
+            UARTWrite(F[C]);
+    }
+}
+void NOcoordenada(void) {
+    uint8_t F[]="E1";
+    for(uint8_t C=0; C<(sizeof(F)); C++) {
+            UARTWrite(F[C]);
+    }
+}
+
+void OCUPADO(void) {
+    uint8_t F[]="B";
+    for(uint8_t C=0; C<(sizeof(F)); C++) {
+            UARTWrite(F[C]);
+    }
+}
+
+void COORReal (uint16_t Xvalora,uint16_t Yvalora) {
+    uint8_t Send;
+    uint8_t Pos[]="X=000 Y=000";
+    Pos[2]=(Xvalora/100)+'0';
+    Pos[3]=(Xvalora % 100) / 10 + '0';
+    Pos[4]=(Xvalora % 100) % 10 + '0';
+    Pos[8]=(Yvalora/100)+'0';
+    Pos[9]=(Yvalora % 100) / 10 + '0';
+    Pos[10]=(Yvalora % 100) % 10 + '0';
+    for(uint8_t i=0; i<(sizeof(Pos)); i++) {
+                Send=Pos[i];
+                UARTWrite(Send);
+    }
+}
+void Tardanza(void) {
+    uint8_t F[]="E2";
     for(uint8_t C=0; C<(sizeof(F)); C++) {
             UARTWrite(F[C]);
     }

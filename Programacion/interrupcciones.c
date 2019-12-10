@@ -11,18 +11,36 @@
 #include "interrupcciones.h"
 #include "MOTOR.h"
 #include "GPIO.h"
+#include "DEFINES_4550_4MHZ.h"
 
 
 void interrupcionX(void) {
-    APAGAR_DERECHO();
-    APAGAR_IZQUIERDO();
-    motoresmov(0, 1);
-    INTCONbits.INT0IF=0;
+    ENABLE_A(0);
+    ENABLE_B(0);
+    PWMDutyCycle1(0);
+    PWMDutyCycle2(0);
+    *PA=1;
+    *PB=1;
+    LIMITEX();
 }
 
 void interrupcionY(void) {
-    APAGAR_DERECHO();
-    APAGAR_IZQUIERDO();
-    motoresmov(1, 0);
-    INTCON3bits.INT1F=0;
+    ENABLE_A(0);
+    ENABLE_B(0);
+    PWMDutyCycle1(0);
+    PWMDutyCycle2(0);
+    *PA=1;
+    *PB=1;
+    LIMITEY();
+ 
+}
+
+void PARO2aden(void) {
+    PARO2();
+    ENABLE_A(0);
+    ENABLE_B(0);
+}
+void PARO2out(void) {
+    ENABLE_A(1);
+    ENABLE_B(1);
 }
